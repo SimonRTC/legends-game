@@ -1,0 +1,26 @@
+{
+    "SIGN-IN_FAILURE": {
+        "title": "Impossible de se connecter à votre compte",
+        "type": "danger",
+        "icon": "fa fa-danger",
+        "message": "Votre nom d'utilisateur ou votre mot de passe n'est pas correcte."
+    },
+    "SIGN-UP_FAILURE": {
+        "title": "Impossible de se connecter à votre compte",
+        "type": "danger",
+        "icon": "fa fa-danger",
+        "message": "Votre nom d'utilisateur ou votre mot de passe n'est pas correcte."
+    },
+    "SCENE_FAILURE": {
+        "title": "Oups... Fail!",
+        "type": "danger",
+        "icon": "fa fa-danger",
+        "message": "Bah mange tes morts!"
+    },
+    "EARNING_XP": {
+        "title": "XP++ !",
+        "type": "danger",
+        "icon": "fa fa-danger",
+        "message": "Ta gagné {XP_AMOUNT}XP ! GG mon gars!"
+    }
+}

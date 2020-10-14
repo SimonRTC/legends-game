@@ -1,0 +1,28 @@
+{
+    "name": "simonrtc/legens-game",
+    "description": "Legend's Game",
+    "authors": [
+        {
+            "name": "Sibel Urbain",
+            "email": "sibel.urbain@gmail.com"
+        },
+        {
+            "name": "Axel Guihard",
+            "email": "axelg-44@hotmail.fr"
+        },
+        {
+            "name": "Simon Malpel",
+            "email": "simon.malpel@orange.fr"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "LegendsGame\\": "src/Models/",
+            "LegendsGame\\Controllers\\": "src/Controllers/"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.0"
+    }
+}

@@ -1,0 +1,35 @@
+[
+    {
+        "method": "GET",
+        "pattern": "/",
+        "service": "Welcome::Welcome",
+        "cache": false
+    },
+    {
+        "method": "GET",
+        "pattern": "/game",
+        "service": "Game::ShowMap",
+        "auth": true
+    },
+    {
+        "method": "GET|POST",
+        "pattern": "/game/{level-name}",
+        "service": "Game::ShowLevel",
+        "auth": true
+    },
+    {
+        "method": "GET|POST",
+        "pattern": "/connexion",
+        "service": "Account::SignIn"
+    },
+    {
+        "method": "GET|POST",
+        "pattern": "/inscription",
+        "service": "Account::SignUp"
+    },
+    {
+        "method": "GET",
+        "pattern": "/deconnexion",
+        "service": "Account::Logout"
+    }
+]
