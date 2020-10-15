@@ -1,0 +1,63 @@
+.main-maps {
+    z-index: -1;
+    position: relative;
+    
+    height: 80vh;
+    width: 100%;
+
+    background-image: url("/assets/img/maps/main-maps.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-maps .maps-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+
+    background-color: rgba(58, 58, 58, 0.475);
+}
+
+.gird-maps {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    background-image: url("/assets/img/maps/main-maps.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    z-index: -1;
+}
+
+.main-maps .maps-overlay h1.title-overlay {
+    position: absolute;
+
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 4.4rem;
+    
+    display: flex;
+
+    color: #f7f7f7;
+}
+
+.main-maps .maps-overlay p.description-overlay {
+    position: absolute;
+
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 1.75rem;
+
+    max-width: 38rem;
+
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: #f7f7f7;
+}

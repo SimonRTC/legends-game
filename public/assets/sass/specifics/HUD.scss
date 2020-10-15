@@ -1,0 +1,77 @@
+
+.board .inventory {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    
+    padding: 0.5rem 2rem 0 2rem;
+    
+}
+
+.board .inventory .wallets p {
+    display: inline-block;
+
+    padding: 0.2rem 1.5rem;
+
+    background-color: rgba(24, 24, 24, 0.524);
+    color: rgba(255, 255, 255, 0.842);
+    
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 0 100%, 0% 85%); 
+}
+
+.board .inventory .wallets p a.open-tab-menu {
+    color: rgba(255, 255, 255, 0.842);
+}
+
+.board .inventory .wallets div.dropdown {
+    display: inline-block;
+    margin: 0 .8rem;
+}
+
+.gird-maps ul.maps-blip {
+    position: relative;
+    
+}
+
+.gird-maps ul.maps-blips li.maps-blip {
+    position: absolute;
+    list-style: none;
+
+    font-size: 2rem;
+
+    padding: 1.2rem 2.2rem;
+
+    color: rgba(211, 211, 211, 0.918);
+
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+
+    background-color: rgba(24, 24, 24, 0.524);
+}
+
+.gird-maps ul.maps-blips li.maps-blip.active {
+    clip-path: none;
+    background-color: rgba(24, 24, 24, 0.624);
+    border-radius: 0.1rem;
+
+    z-index: 999;
+}
+
+.gird-maps ul.maps-blips li.maps-blip p.blip-name {
+    display: none;
+
+    font-size: 1.4rem;
+
+    max-width: 30rem;
+}
+
+.gird-maps ul.maps-blips li.maps-blip p.blip-name span.description {
+    display: block;
+    margin: 0.55rem 0 0 0;
+    text-align: justify;
+    font-size: .85rem;
+}
+
+.gird-maps ul.maps-blips li.maps-blip p.blip-name.active {
+    display: block;
+}
