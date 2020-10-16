@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+.gold-deco {
+    background-image: url("/assets/img/shop/bourse-deco.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 8rem;
+    height: 8rem;
+}
+.coin-deco {
+    background-image: url("/assets/img/shop/coin-shop.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 2rem;
+    height: 2rem;
+}
+.h-100 {
+    background-image: url("/assets/img/shop/fond-bois-shop - Copie.jpg");
+    background-size: 100% 100%;
+    
+    border-radius: 11px;
+    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+
+}
+.h-100 a, h5 {
+    font-size: 0.9rem;
+    color:rgb(255, 255, 255);
+   
+    text-shadow: 2px 0 0 black, 2px 2px 0 black, 0 2px 0 black, -2px 2px 0 black, -2px 0 0 black, -2px -2px 0 black, 0 -2px 0 black, 2px -2px 0 black;
+    
+    display: inline-block;
+    padding: 1rem;
+}

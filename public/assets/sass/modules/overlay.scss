@@ -14,6 +14,9 @@
 
     z-index: -1;
 
+    &.overlay-shop{
+        background-image: url("/assets/img/navigation/overlay/banner-shop.jpg");
+    }
     .fadeout {
 
         width: 100%;
