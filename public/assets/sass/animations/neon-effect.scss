@@ -1,0 +1,15 @@
+.neon-effect {
+    -webkit-animation: NeonEffect 1s ease-in-out infinite alternate;
+    -moz-animation: NeonEffect 1s ease-in-out infinite alternate;
+    animation: NeonEffect 1s ease-in-out infinite alternate;
+}
+
+@keyframes NeonEffect {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e4c92f, 0 0 40px #e4c92f, 0 0 50px #e4c92f, 0 0 60px #e4c92f, 0 0 70px #e4c92f;
+    }
+      
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #dfc325, 0 0 40px #dfc325, 0 0 50px #dfc325, 0 0 60px #dfc325, 0 0 70px #dfc325, 0 0 80px #dfc325;
+    }
+}

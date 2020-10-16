@@ -1,0 +1,31 @@
+
+footer.footer {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("/assets/img/navigation/footer-wood.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    padding: 3.5rem 0;
+
+    height: 5rem;
+}
+
+footer.footer p {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 1.4rem;
+
+    max-width: 50%;
+    color: #e0e0e0;
+
+    span.legal-notice {
+        font-size: 1rem;
+        display: block;
+
+        color: #c5c5c5;
+    }
+}

@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+.neon-effect {
+  -webkit-animation: NeonEffect 1s ease-in-out infinite alternate;
+  -moz-animation: NeonEffect 1s ease-in-out infinite alternate;
+  animation: NeonEffect 1s ease-in-out infinite alternate;
+}
+
+@keyframes NeonEffect {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e4c92f, 0 0 40px #e4c92f, 0 0 50px #e4c92f, 0 0 60px #e4c92f, 0 0 70px #e4c92f;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #dfc325, 0 0 40px #dfc325, 0 0 50px #dfc325, 0 0 60px #dfc325, 0 0 70px #dfc325, 0 0 80px #dfc325;
+  }
+}
+.main-maps {
+  z-index: -1;
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  background-image: url("/assets/img/maps/main-maps.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main-maps .maps-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(58, 58, 58, 0.475);
+}
+
+.gird-maps {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: url("/assets/img/maps/main-maps.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.main-maps .maps-overlay h1.title-overlay {
+  position: absolute;
+  font-family: "Dancing Script", cursive;
+  font-size: 4.4rem;
+  display: flex;
+  color: #f7f7f7;
+}
+
+.main-maps .maps-overlay p.description-overlay {
+  position: absolute;
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  font-size: 1.75rem;
+  max-width: 38rem;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f7f7f7;
+}
+
+.board .inventory {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem 2rem 0 2rem;
+}
+
+.board .inventory .wallets p {
+  display: inline-block;
+  padding: 0.2rem 1.5rem;
+  background-color: rgba(24, 24, 24, 0.524);
+  color: rgba(255, 255, 255, 0.842);
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
+}
+
+.board .inventory .wallets p a.open-tab-menu {
+  color: rgba(255, 255, 255, 0.842);
+}
+
+.board .inventory .wallets div.dropdown {
+  display: inline-block;
+  margin: 0 0.8rem;
+}
+
+.gird-maps ul.maps-blip {
+  position: relative;
+}
+
+.gird-maps ul.maps-blips li.maps-blip {
+  position: absolute;
+  list-style: none;
+  font-size: 2rem;
+  padding: 1.2rem 2.2rem;
+  color: rgba(211, 211, 211, 0.918);
+  clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+  background-color: rgba(24, 24, 24, 0.524);
+}
+
+.gird-maps ul.maps-blips li.maps-blip.active {
+  clip-path: none;
+  background-color: rgba(24, 24, 24, 0.624);
+  border-radius: 0.1rem;
+  z-index: 999;
+}
+
+.gird-maps ul.maps-blips li.maps-blip p.blip-name {
+  display: none;
+  font-size: 1.4rem;
+  max-width: 30rem;
+}
+
+.gird-maps ul.maps-blips li.maps-blip p.blip-name span.description {
+  display: block;
+  margin: 0.55rem 0 0 0;
+  text-align: justify;
+  font-size: 0.85rem;
+}
+
+.gird-maps ul.maps-blips li.maps-blip p.blip-name.active {
+  display: block;
+}
+
+main.bg-parchment {
+  background-image: url("/assets/img/navigation/header-background.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: -2.6rem 0 0 0;
+  padding: 2rem 0 0 0;
+}
+
+@media screen and (max-width: 1300px) {
+  main.bg-parchment {
+    background-image: url("/assets/img/navigation/header-background-small.png");
+    background-size: auto;
+  }
+}
+/*
+*
+* Fonts importation
+*
+*/
+header.navigation {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+header.navigation nav.navbar {
+  background-image: url("/assets/img/navigation/wood-bar.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0px 6px 16px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 16px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 16px -4px rgba(0, 0, 0, 0.75);
+  color: #FFF;
+  z-index: 999;
+}
+
+header.navigation nav.navbar li.nav-item a.nav-link {
+  transition-duration: 0.3s;
+  color: #FFF;
+}
+
+header.navigation nav.navbar li.nav-item a.nav-link:hover {
+  transition-duration: 0.3s;
+  color: #bebebe;
+}
+
+header.navigation a.navbar-brand {
+  font-family: "Dancing Script", cursive;
+  color: #FFF;
+  padding: 0 1.4rem 0 1rem;
+  font-size: 2rem;
+}
+
+ul.navbar-nav li.nav-item {
+  padding: 0 1.2rem;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+main.bg-parchment {
+  background-image: url("/assets/img/navigation/header-background.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: -2.6rem 0 0 0;
+  padding: 2rem 0 0 0;
+}
+
+@media screen and (max-width: 1300px) {
+  main.bg-parchment {
+    background-image: url("/assets/img/navigation/header-background-small.png");
+    background-size: auto;
+  }
+}
+.overlay {
+  font-family: "Dancing Script", cursive;
+  height: auto;
+  width: 100%;
+  color: #FFFFFF;
+  text-align: center;
+  background-image: url("/assets/img/maps/main-maps.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.overlay .fadeout {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.34);
+}
+.overlay .container {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0 3rem 0;
+}
+.overlay .container h1 {
+  font-size: 3.8rem;
+}
+.overlay .container p {
+  font-size: 1.4rem;
+}
+
+footer.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/assets/img/navigation/footer-wood.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 3.5rem 0;
+  height: 5rem;
+}
+
+footer.footer p {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  font-size: 1.4rem;
+  max-width: 50%;
+  color: #e0e0e0;
+}
+footer.footer p span.legal-notice {
+  font-size: 1rem;
+  display: block;
+  color: #c5c5c5;
+}
+
+.btn-parchment {
+  font-size: 25px;
+  font-family: "Dancing Script", cursive;
+  color: white;
+  text-shadow: 0 1px 0 #060c0c;
+  background-image: url("/assets/img/shop/enteteNav.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.btn-parchment:hover {
+  color: #fdec6e;
+  text-shadow: 0px 0px 30px #fdec6e;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  text-decoration: none;
+}
+.btn-parchment.btn-center {
+  display: block;
+  margin: auto;
+}
+
+/*# sourceMappingURL=main.css.map */

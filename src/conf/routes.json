@@ -7,13 +7,13 @@
     },
     {
         "method": "GET",
-        "pattern": "/game",
+        "pattern": "/maps",
         "service": "Game::ShowMap",
         "auth": true
     },
     {
         "method": "GET|POST",
-        "pattern": "/game/{level-name}",
+        "pattern": "/maps/{level-name}",
         "service": "Game::ShowLevel",
         "auth": true
     },
