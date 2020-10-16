@@ -17,7 +17,7 @@
                     <div class="card-body">
                         <div class="card-block">
                             <h5 class="card-title">Sibel Urbain</h5>
-                            <p class="card-text"><span class="text-expose">UI Designer</span> & <span class="text-expose">Game Writer</span></p>
+                            <p class="card-text"><span class="text-expose">UI Designer</span> & <span class="text-expose">Game Designer</span></p>
                         </div>
                         <div class="card-block card-footer">
                             <div class="row justify-content-center mt-4">
@@ -34,7 +34,7 @@
                     <div class="card-body">
                         <div class="card-block">
                             <h5 class="card-title">Axel Guihard</h5>
-                            <p class="card-text"><span class="text-expose">UI Designer</span></p>
+                            <p class="card-text"><span class="text-expose">UI Designer</span> & <span class="text-expose">Mascotte</span></p>
                         </div>
                         <div class="card-block card-footer">
                             <div class="row justify-content-center mt-4">
