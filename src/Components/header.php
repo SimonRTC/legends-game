@@ -3,6 +3,7 @@
     <head>
         <title>Legend's Game</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="/assets/font/fontawesome/css/all.min.css">
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="/assets/css/main.css">
     </head>
