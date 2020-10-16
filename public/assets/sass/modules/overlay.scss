@@ -14,6 +14,11 @@
 
     z-index: -1;
 
+    &.overlay-landscape {
+        background-position: center;
+        background-image: url("/assets/img/navigation/overlay/landscape.jpg");
+    }
+
     .fadeout {
 
         width: 100%;

@@ -129,7 +129,7 @@ main.bg-parchment {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   margin: -2.6rem 0 0 0;
-  padding: 2rem 0 0 0;
+  padding: 2rem 0 4rem 0;
 }
 
 @media screen and (max-width: 1300px) {
@@ -138,6 +138,15 @@ main.bg-parchment {
     background-size: auto;
   }
 }
+.jumbotron.jumbotron-wood {
+  background-image: url("/assets/img/navigation/jumbotron.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  border-radius: 0;
+  filter: drop-shadow(0 0 0.75rem black);
+}
+
 /*
 *
 * Fonts importation
@@ -200,7 +209,7 @@ main.bg-parchment {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   margin: -2.6rem 0 0 0;
-  padding: 2rem 0 0 0;
+  padding: 2rem 0 4rem 0;
 }
 
 @media screen and (max-width: 1300px) {
@@ -209,6 +218,15 @@ main.bg-parchment {
     background-size: auto;
   }
 }
+.jumbotron.jumbotron-wood {
+  background-image: url("/assets/img/navigation/jumbotron.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  border-radius: 0;
+  filter: drop-shadow(0 0 0.75rem black);
+}
+
 .overlay {
   font-family: "Dancing Script", cursive;
   height: auto;
@@ -219,6 +237,10 @@ main.bg-parchment {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
+}
+.overlay.overlay-landscape {
+  background-position: center;
+  background-image: url("/assets/img/navigation/overlay/landscape.jpg");
 }
 .overlay .fadeout {
   width: 100%;
@@ -259,6 +281,42 @@ footer.footer p span.legal-notice {
   font-size: 1rem;
   display: block;
   color: #c5c5c5;
+}
+
+.space-card-title {
+  text-align: center;
+  padding: 2rem 0;
+  color: #FFF;
+}
+
+.card.card-parchment {
+  background-color: transparent;
+  border: transparent;
+}
+.card.card-parchment .card-block {
+  color: #FFF;
+  background-color: rgba(29, 29, 29, 0.256);
+  clip-path: polygon(4% 0, 100% 0%, 96% 100%, 0% 100%);
+  padding: 2rem 0 0.5rem 0;
+}
+.card.card-parchment .card-block.card-footer {
+  background-color: rgba(29, 29, 29, 0.346);
+  margin: -0.01rem 0 0 0;
+  padding: 0rem 0 2.2rem 0;
+  clip-path: polygon(0 0, 96% 0, 100% 100%, 4% 100%);
+}
+.card.card-parchment .card-block .card-title {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 1rem 0 0 0;
+}
+.card.card-parchment .card-block .card-text {
+  text-align: center;
+  margin: 0 0 2rem 0;
+}
+.card.card-parchment .card-block .card-text .text-expose {
+  font-weight: bold;
+  font-weight: 625;
 }
 
 .btn-parchment {
