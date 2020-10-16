@@ -7,6 +7,11 @@
     },
     {
         "method": "GET",
+        "pattern": "/boutique",
+        "service": "Shop::Main"
+    },
+    {
+        "method": "GET",
         "pattern": "/maps",
         "service": "Game::ShowMap",
         "auth": true
