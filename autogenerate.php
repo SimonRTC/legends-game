@@ -29,6 +29,11 @@ if (!realpath("./tmp/cache/")) {
     echo "\n\e[34m > Temporary file cache as been created. \e[33m\n\n";
 }
 
+if (!realpath("./tmp/nginx/")) {
+    mkdir("./tmp/nginx/");
+    echo "\n\e[34m > Nginx log file as been created. \e[33m\n\n";
+}
+
 /**
  * SQL Dump (file creation)
  */

@@ -1,0 +1,7 @@
+{
+    "namesapce": "LG_",
+    "semantic": "::",
+    "vars": {
+        "DATABASES": "{PATH}/src/conf/databases.{format}"
+    }
+}

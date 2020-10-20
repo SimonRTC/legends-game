@@ -16,6 +16,18 @@ class Welcome {
         return;
     }
 
+    /**
+     * Game Credits
+     *
+     * @param  object $Response
+     * @param  array $Binded
+     * @return void
+     */
+    public function Credits(\LegendsGame\Response $Response, array $Binded = []): void {
+        $Response->load("credits");
+        return;
+    }
+
 }
 
 ?>

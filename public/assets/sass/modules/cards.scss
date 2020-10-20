@@ -1,0 +1,36 @@
+.space-card-title {
+    text-align: center;
+    padding: 2rem 0;
+    color: #FFF;
+}
+.card {
+    &.card-parchment {
+        background-color: transparent;
+        border: transparent;        
+        .card-block {
+            color: #FFF;
+            background-color: rgba(29, 29, 29, 0.256);
+            clip-path: polygon(4% 0, 100% 0%, 96% 100%, 0% 100%);
+            padding: 2rem 0 0.5rem 0;
+            &.card-footer {
+                background-color: rgba(29, 29, 29, 0.346);
+                margin: -0.01rem 0 0 0;
+                padding: 0rem 0 2.2rem 0;
+                clip-path: polygon(0 0, 96% 0, 100% 100%, 4% 100%);
+            }
+            .card-title {
+                text-align: center;
+                font-size: 1.4rem;
+                margin: 1rem 0 0 0;
+            }
+            .card-text {
+                text-align: center;
+                margin: 0 0 2rem 0;
+                .text-expose {
+                    font-weight: bold;
+                    font-weight: 625;
+                }
+            }
+        }
+    }
+}

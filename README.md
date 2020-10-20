@@ -6,6 +6,27 @@
 
 ---
 
+## How to deploy databases with environment variables
+> Minify your JSON to avoid breakage.
+```json
+{
+    "default": {
+        "host": "localhost",
+        "port": "3306",
+        "database": "legendgame",
+        "username": "root",
+        "password": null,
+        "charset": "utf8"
+    }
+}
+
+```
+
+**Example variable**: 
+"LG_DATABASES", "JSON::``{"default":{"host":"localhost","port":"3306","database":"legendgame","username":"root","password":null,"charset":"utf8"}}``"
+
+---
+
 ## Deployment configuration
 - [x] Dockerfile
 - [x] PHP 7.4 (php.ini & fpm-pool)
