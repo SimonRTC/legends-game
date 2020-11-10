@@ -1,0 +1,16 @@
+{
+    "GO_TO_QUESTION": {
+        "refresh": true,
+        "parameters": [ "NEXT_TAG" ],
+        "callable": "\\LegendsGame\\Actions\\Questions::GoToNextQuestion"
+    },
+    "DICE_ROLL": {
+        "refresh": true,
+        "parameters": [ "DICE_TYPE", "SUCESSFULL_TAG", "FAILURE_TAG" ],
+        "callable": "\\LegendsGame\\Actions\\Dices::RollDice"
+    },
+    "DEFINE_PLAYER_MODEL": {
+        "parameters": [ "MODEL" ],
+        "callable": "\\LegendsGame\\Actions\\Player::DefineModel"
+    }
+}

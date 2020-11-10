@@ -18,7 +18,7 @@
     },
     {
         "method": "GET|POST",
-        "pattern": "/maps/{level-name}",
+        "pattern": "/maps/chapter/{permalien}",
         "service": "Game::ShowLevel",
         "auth": true
     },

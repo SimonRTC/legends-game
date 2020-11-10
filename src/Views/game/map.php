@@ -1,5 +1,7 @@
-<br />
+<br /><br /><br /><br /><br />
 
-<?php foreach ($_DATAS_["BLIPS"] as $Blip): ?>
-    <a href="<?= $Blip->permalien ?>"><?= $Blip->name ?></a><br />
+<?php foreach ($_DATAS_["CHAPTERS"] as $Chapter): ?>
+    <a href="<?= "/maps/chapter/{$Chapter->permalien}/" ?>"><?= $Chapter->name ?></a><br />
 <?php endforeach; ?>
+
+<br /><br /><br />
