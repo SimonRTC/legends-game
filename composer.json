@@ -19,7 +19,8 @@
     "autoload": {
         "psr-4": {
             "LegendsGame\\": "src/Models/",
-            "LegendsGame\\Controllers\\": "src/Controllers/"
+            "LegendsGame\\Controllers\\": "src/Controllers/",
+            "LegendsGame\\Actions\\": "src/Actions/"
         }
     },
     "require-dev": {
