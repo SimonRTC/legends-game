@@ -18,9 +18,11 @@ class Response {
      *
      * @param  string $ModelName
      * @param  array $Binded
+     * @param  array $components
      * @return void
      */
-    public function Load(string $ModelName, array $Binded = [], array $Schedule = []): void {
+    public function Load(string $ModelName, array $Binded = [], array $Schedule = [], array $components = [ true, true ]): void {
+        [ $_header, $_footer ] = $components;
         $ModelPath = \realpath( $this->Path . "/" . trim($ModelName, "/") . ".php" );
         if (!empty($ModelPath) && $ModelPath !== false) {
             [ $header, $footer ] = $this->GetComponents();
@@ -29,14 +31,18 @@ class Response {
             $_ACCOUNT_      = $this->_ACCOUNT_;
             $_DATAS_        = $Binded;
 
-            require (!empty($header)? $header: __PATH__ . "/src/Components/header.php");
+            if ($_header) {
+                require (!empty($header)? $header: __PATH__ . "/src/Components/header.php");
+            }
 
             // Scheduled closures
             $_SCHEDULED_    = $this->ScheduleObjects($Schedule);
 
             require $ModelPath;
 
-            require (!empty($footer)? $footer: __PATH__ . "/src/Components/footer.php");
+            if ($_footer) {
+                require (!empty($footer)? $footer: __PATH__ . "/src/Components/footer.php");
+            }
 
         } else {
             http_response_code(500);
