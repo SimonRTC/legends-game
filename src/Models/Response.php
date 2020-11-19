@@ -31,9 +31,7 @@ class Response {
             $_ACCOUNT_      = $this->_ACCOUNT_;
             $_DATAS_        = $Binded;
 
-            if ($_header) {
-                require (!empty($header)? $header: __PATH__ . "/src/Components/header.php");
-            }
+            require (!empty($header)? $header: __PATH__ . "/src/Components/header.php");
 
             // Scheduled closures
             $_SCHEDULED_    = $this->ScheduleObjects($Schedule);
