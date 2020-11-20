@@ -30,7 +30,7 @@ class Account {
                         "identifier"    => $Player["uuid"],
                         "username"      => $Player["username"],
                         "email"         => $Player["email"],
-                        "level"         => (int) $Player["level"],
+                        "lvltag"        => $Player["lvltag"],
                         "character"     => (object) [
                             "name"  => $Player["character_name"],
                             "skin"  => (!empty($Player["skin"])? json_decode($Player["skin"], false): [])
@@ -56,7 +56,7 @@ class Account {
         $email      = htmlentities($email);
         $password   = hash("sha256", $password);
         if ($this->SearchAccount($username, $username, $email) === null) {
-            $response   = $this->Database->Request("INSERT INTO `players` (`uuid`, `email`, `username`, `password`, `character_name`, `skin`, `level`, `inventory`, `created`) VALUES (:uuid, :email, :username, :password, null, null, 0, null, :created);", [
+            $response   = $this->Database->Request("INSERT INTO `players` (`uuid`, `email`, `username`, `password`, `character_name`, `skin`, `lvltag`, `inventory`, `created`) VALUES (:uuid, :email, :username, :password, null, null, null, null, :created);", [
                 "uuid"      => $this->CreateRandomString(64),
                 "email"     => $email,
                 "username"  => $username,

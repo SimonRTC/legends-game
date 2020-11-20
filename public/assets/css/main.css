@@ -132,12 +132,14 @@ main.bg-parchment {
 header.navigation {
   position: absolute;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 
 header.navigation nav.navbar {
   background-image: url("/assets/img/navigation/wood-bar.png");
-  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-size: cover;
   -webkit-box-shadow: 0px 6px 16px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 6px 16px -4px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 6px 16px -4px rgba(0, 0, 0, 0.75);
@@ -201,6 +203,8 @@ main.bg-parchment {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1; }
+  .overlay.overlay-fullscreen {
+    height: 100vh; }
   .overlay.overlay-landscape {
     background-position: center;
     background-image: url("/assets/img/navigation/overlay/landscape.jpg"); }
@@ -208,6 +212,15 @@ main.bg-parchment {
     width: 100%;
     height: 100%;
     background-color: rgba(20, 20, 20, 0.34); }
+    .overlay .fadeout.fadeout-card {
+      padding: 4rem 3rem;
+      background-color: rgba(20, 20, 20, 0.26);
+      clip-path: polygon(3% 0, 100% 0%, 97% 100%, 0% 100%);
+      border-radius: 2rem; }
+  .overlay .overlay-static {
+    text-align: left; }
+    .overlay .overlay-static h1, .overlay .overlay-static h2, .overlay .overlay-static h3, .overlay .overlay-static h4, .overlay .overlay-static h5, .overlay .overlay-static h6 {
+      text-align: center; }
   .overlay .container {
     position: relative;
     overflow: hidden;

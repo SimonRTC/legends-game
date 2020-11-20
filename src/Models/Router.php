@@ -29,9 +29,6 @@ class Router {
         $this->_ACCOUNT_        = (isset($_SESSION["_ACCOUNT_"]) && !empty($_SESSION["_ACCOUNT_"])? $_SESSION["_ACCOUNT_"]: null);
         $this->HttpCode         = null;
 
-        $EnvVars = new \LegendsGame\EnvVars;
-        dd($EnvVars);
-
         if (isset($_SESSION["_NOTIFICATIONS_"]) && !empty($_SESSION["_NOTIFICATIONS_"])) {
             var_dump($_SESSION["_NOTIFICATIONS_"]);
             unset($_SESSION["_NOTIFICATIONS_"]);

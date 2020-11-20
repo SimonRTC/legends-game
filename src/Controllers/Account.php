@@ -31,7 +31,7 @@ class Account {
                     return;
                 }
             }
-            $Response->load("account/signin");
+            $Response->load("account/signin", [], [], [ true, false ]);
             return;
         }
         $Response->HttpClientRedirect("/");
