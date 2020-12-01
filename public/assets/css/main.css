@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap%27");
 .neon-effect {
   -webkit-animation: NeonEffect 1s ease-in-out infinite alternate;
   -moz-animation: NeonEffect 1s ease-in-out infinite alternate;
@@ -124,6 +125,98 @@
   display: block;
 }
 
+.grcard {
+  padding: 50px;
+  margin: 0;
+}
+
+.card {
+  border-radius: 50px;
+  border: none;
+}
+
+.card-title, .card-text {
+  text-shadow: black 1px 0 10px;
+}
+
+.wood {
+  border: 1px solid black;
+  background-image: url("/assets/img/ranks/wood_texture.png");
+  background-size: cover;
+  z-index: 1;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.imgback {
+  margin: 8px;
+  margin-top: 0;
+  padding: 8px;
+  z-index: 2;
+  border: 1px solid black;
+}
+
+.bg_card_one {
+  background-image: url("/assets/img/ranks/bg_gold.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: none;
+}
+
+.bg_card_two {
+  background-image: url("/assets/img/ranks/bg_silver.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+}
+
+.bg_card_three {
+  background-image: url("/assets/img/ranks/bg_bronze.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+}
+
+.bg_next {
+  background-image: url("/assets/img/ranks/paper.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: none;
+}
+
+.divider {
+  height: 2px;
+  background-color: black;
+}
+
+.spellbook {
+  position: absolute;
+  width: 300px;
+  height: auto;
+}
+
+.lantern {
+  position: absolute;
+  width: 400px;
+  height: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .spellbook {
+    display: none;
+  }
+
+  .lantern {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .card-rank {
+    margin-bottom: 0.5rem;
+  }
+}
 main.bg-parchment {
   background-image: url("/assets/img/navigation/header-background.png");
   background-size: 100% 100%;
@@ -244,6 +337,10 @@ main.bg-parchment {
   background-position: center;
   background-image: url("/assets/img/navigation/overlay/landscape.jpg");
 }
+.overlay.overlay-ranks {
+  background-position: center;
+  background-image: url("/assets/img/navigation/overlay/ranks.jpg");
+}
 .overlay .fadeout {
   width: 100%;
   height: 100%;
@@ -300,15 +397,6 @@ footer.footer p span.legal-notice {
 }
 .card.card-parchment .card-block {
   color: #FFF;
-  background-color: rgba(29, 29, 29, 0.256);
-  clip-path: polygon(4% 0, 100% 0%, 96% 100%, 0% 100%);
-  padding: 2rem 0 0.5rem 0;
-}
-.card.card-parchment .card-block.card-footer {
-  background-color: rgba(29, 29, 29, 0.346);
-  margin: -0.01rem 0 0 0;
-  padding: 0rem 0 2.2rem 0;
-  clip-path: polygon(0 0, 96% 0, 100% 100%, 4% 100%);
 }
 .card.card-parchment .card-block .card-title {
   text-align: center;
@@ -324,27 +412,72 @@ footer.footer p span.legal-notice {
   font-weight: 625;
 }
 
+.chest {
+  background-image: url("/assets/img/credits/ClosedChest.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition-duration: 0.5s;
+}
+.chest .displayText {
+  visibility: hidden;
+}
+
+.chest:hover {
+  background-image: url("/assets/img/credits/OpenChest.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition-duration: 0.5s;
+}
+.chest:hover .displayText {
+  visibility: visible;
+}
+
+.chatBox {
+  position: relative;
+  text-align: center;
+}
+
+.chatBoxAjust {
+  position: absolute;
+  top: 44%;
+  left: 50.3%;
+  transform: translate(-50%, -50%);
+  font-size: 70%;
+}
+.chatBoxAjust h5 {
+  font-size: 90%;
+}
+
+@media screen and (max-width: 767px) {
+  .responsiveCredits {
+    visibility: hidden;
+  }
+
+  .chatBoxAjust {
+    top: 60%;
+  }
+}
 .btn-parchment {
   font-size: 25px;
-  font-family: "Dancing Script", cursive;
+  font-family: "Luckiest Guy", cursive;
+  text-shadow: 2px 0 0 black, 2px 2px 0 black, 0 2px 0 black, -2px 2px 0 black, -2px 0 0 black, -2px -2px 0 black, 0 -2px 0 black, 2px -2px 0 black;
+  background-image: url("/assets/img/buttons/button-parchment.png");
   color: white;
-  text-shadow: 0 1px 0 #060c0c;
-  background-image: url("/assets/img/shop/enteteNav.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 .btn-parchment:hover {
-  color: #fdec6e;
-  text-shadow: 0px 0px 30px #fdec6e;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-  text-decoration: none;
+  color: #ffc107;
 }
 .btn-parchment.btn-center {
   display: block;
   margin: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .btn-parchment {
+    background-image: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

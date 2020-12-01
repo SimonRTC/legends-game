@@ -1,0 +1,94 @@
+.grcard{
+    padding: 50px;
+    margin: 0;
+}
+
+.card {
+    border-radius: 50px;
+    border: none;  
+}
+
+.card-title, .card-text{
+    text-shadow: black 1px 0 10px;
+}
+
+.wood{
+	border:1px solid black;
+    background-image: url("/assets/img/ranks/wood_texture.png");
+    background-size: cover;
+	z-index:1;
+	-moz-border-radius:50px;	        
+    border-radius:50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.imgback{
+	margin:8px;
+	margin-top:0;
+	padding:8px;
+	z-index:2;
+	border:1px solid black;
+}
+
+.bg_card_one{
+    background-image: url("/assets/img/ranks/bg_gold.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: none;
+}
+
+.bg_card_two{
+    background-image: url("/assets/img/ranks/bg_silver.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+}
+
+.bg_card_three{
+    background-image: url("/assets/img/ranks/bg_bronze.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+}
+
+.bg_next{
+    background-image: url("/assets/img/ranks/paper.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: none;
+}
+
+.divider{
+    height: 2px;
+    background-color: black;
+}
+
+.spellbook{
+    position: absolute;
+    width: 300px;
+    height: auto;
+}
+
+.lantern{
+    position: absolute;
+    width: 400px;
+    height: auto;
+}
+
+@media screen and (max-width: 1200px) { 
+    .spellbook {
+        display: none;
+    }
+
+    .lantern {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) { 
+    .card-rank{
+        margin-bottom: 0.5rem;
+    }
+}
+
