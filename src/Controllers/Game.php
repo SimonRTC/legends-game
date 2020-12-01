@@ -18,7 +18,7 @@ class Game {
     public function ShowMap(\LegendsGame\Response $Response, array $Binded = []): void {
         $Response->load("game/map", [
             "CHAPTERS" => $this->Game->Chapters
-        ]);
+        ], [], [ false, false ]);
     }
 
     /**
