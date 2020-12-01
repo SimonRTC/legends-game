@@ -1,0 +1,54 @@
+[
+    {
+        "name": "Premiers pas sur l'île",
+        "tag": "0.0.0",
+        "permalien": "premiers-pas",
+        "questions": [
+            {
+                "tag": "0.0.0",
+                "narration": "Vous êtes allongé sur un sol froid et humide, vous entrouvrez les yeux, votre tête vous fait mal, il semblerait que vous vous trouver aux portes d’une taverne et qu’hier soir vous ayez un peu forcer sur la chopine ! Soudain, un vieil homme se penche sur vous ! Il vous interpelle :",
+                "actions": null,
+                "characters": [
+                    {
+                        "identifier": "THE-OLD-MAN-FROM-THE-START",
+                        "dialogue": "Hé bien maintenant je connais quelqu’un qui a bu plus que de raison la nuit dernière, tenez accrochez-vous, je vais vous aider à vous relever !"
+                    }
+                ],
+                "responses": [
+                    {
+                        "label": "Vous acceptez l’aide du vieillard, c’est sympa !",
+                        "actions": "GO_TO_QUESTION[0.2.2]"
+                    },
+                    {
+                        "label": "Vous vous méfiez, et essayez de relever tout seul…",
+                        "actions": "DICE_ROLL[AGILITY, 0.2.2, 0.2.1]"
+                    }
+                ]
+            },
+            {
+                "tag": "0.2.1",
+                "narration": "Fichtre ! Vous tentez de vous relever par vous-même mais à la place, votre corps s’étale de nouveau de tout son long dans la boue…La honte s’éprends de vous en apercevant le sourire du vieillard lorsque celui-ci vous retends la main… Et cette fois-ci vous la saisissez… Il vous demande :",
+                "characters": [
+                    {
+                        "identifier": "THE-OLD-MAN-FROM-THE-START",
+                        "dialogue": "Excusez ma curiosité mais ma vue n’est plus ce qu’elle était… Mais je sens bien que vous êtes un aventurier ! D’où venez-vous ?"
+                    }
+                ],
+                "responses": [
+                    {
+                        "label": "Je suis une Elfe des forets de Mist Island, au Nord de Kappa !",
+                        "actions": "DEFINE_PLAYER_MODEL[ELF]"
+                    },
+                    {
+                        "label": "Je suis un brave Nain venant des Caucausius Montains, au Nord-Ouest de Kappa !",
+                        "actions": "DEFINE_PLAYER_MODEL[DWARF]"
+                    },
+                    {
+                        "label": "Euh, Je suis un humain, j’habite ici, à Bilgewater",
+                        "actions": "DEFINE_PLAYER_MODEL[HUMAN]"
+                    }
+                ]
+            }
+        ]
+    }
+]

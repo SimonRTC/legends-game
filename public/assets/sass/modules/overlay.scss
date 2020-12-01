@@ -14,15 +14,43 @@
 
     z-index: -1;
 
+
     &.overlay-shop{
         background-image: url("/assets/img/navigation/overlay/banner-shop.jpg");
     }
+    
     .fadeout {
+
+        &.overlay-fullscreen {
+            height: 100vh;
+        }
+    
+        &.overlay-landscape {
+            background-position: center;
+            background-image: url("/assets/img/navigation/overlay/landscape.jpg");
+        }
+    
+        &.overlay-ranks {
+            background-position: center;
+            background-image: url("/assets/img/navigation/overlay/ranks.jpg");
+        }
 
         width: 100%;
         height: 100%;
-
         background-color: rgba(20, 20, 20, 0.34);
+        &.fadeout-card {
+            padding: 4rem 3rem;
+            background-color: rgba(20, 20, 20, 0.26);
+            clip-path: polygon(3% 0, 100% 0%, 97% 100%, 0% 100%);
+            border-radius: 2rem;
+        }
+    }
+
+    .overlay-static {
+        text-align: left;
+        h1, h2, h3, h4, h5, h6 {
+            text-align: center;
+        }
     }
 
     .container {

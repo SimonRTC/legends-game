@@ -1,0 +1,81 @@
+.space-card-title {
+    text-align: center;
+    padding: 2rem 0;
+    color: #FFF;
+}
+.card {
+    &.card-parchment {
+        background-color: transparent;
+        border: transparent;        
+        .card-block {
+            color: #FFF;
+            
+            .card-title {
+                text-align: center;
+                font-size: 1.4rem;
+                margin: 1rem 0 0 0;
+            }
+            .card-text {
+                text-align: center;
+                margin: 0 0 2rem 0;
+                .text-expose {
+                    font-weight: bold;
+                    font-weight: 625;
+                }
+            }
+        }
+    }
+}
+
+.chest{
+    background-image: url("/assets/img/credits/ClosedChest.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition-duration: 0.5s;
+
+    .displayText{
+        visibility: hidden;
+    }
+}
+
+.chest:hover{
+    background-image: url("/assets/img/credits/OpenChest.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition-duration: 0.5s;
+
+    .displayText{
+        visibility: visible;
+
+    }
+}
+
+.chatBox{
+    position: relative;
+    text-align: center ;
+}
+
+.chatBoxAjust{
+    position: absolute;
+    top: 44%;
+    left: 50.3%;
+    transform: translate(-50%, -50%);
+
+    font-size: 70%;
+
+    h5{
+        font-size: 90%;
+    }
+
+}
+
+@media screen and (max-width: 767px){
+    .responsiveCredits{
+        visibility: hidden;
+    }
+
+    .chatBoxAjust{
+        top: 60%;
+    }
+}
+

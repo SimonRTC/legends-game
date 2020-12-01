@@ -4,3 +4,9 @@ composer.lock
 
 ## Temporary files (logs, ...)
 /tmp/
+
+## Sass cache
+.sass-cache/
+
+## Configuration
+/src/conf/databases.json

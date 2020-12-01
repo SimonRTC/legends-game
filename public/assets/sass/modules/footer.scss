@@ -15,15 +15,19 @@ footer.footer {
 }
 
 footer.footer p {
-    font-family: 'Dancing Script', cursive;
     text-align: center;
     font-size: 1.4rem;
-
+ 
     max-width: 50%;
     color: #e0e0e0;
 
+    span.neon-effect {
+        font-size: 1.7rem;
+        font-family: 'Dancing Script', cursive;
+    }
+
     span.legal-notice {
-        font-size: 1rem;
+        font-size: 0.85rem;
         display: block;
 
         color: #c5c5c5;

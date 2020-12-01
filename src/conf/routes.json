@@ -7,8 +7,18 @@
     },
     {
         "method": "GET",
+        "pattern": "/classement",
+        "service": "Ranks::Show"
+    },
+    {
+        "method": "GET",
         "pattern": "/boutique",
         "service": "Shop::Main"
+    },
+    {
+        "method": "GET",
+        "pattern": "/credits",
+        "service": "Welcome::Credits"
     },
     {
         "method": "GET",
@@ -18,7 +28,7 @@
     },
     {
         "method": "GET|POST",
-        "pattern": "/maps/{level-name}",
+        "pattern": "/maps/chapter/{permalien}",
         "service": "Game::ShowLevel",
         "auth": true
     },
@@ -37,10 +47,4 @@
         "pattern": "/deconnexion",
         "service": "Account::Logout"
     }
-    {
-        "method": "GET",
-        "pattern": "/jeux",
-        "service": "Welcome::Welcome",
-        "cache": false
-    },
 ]
