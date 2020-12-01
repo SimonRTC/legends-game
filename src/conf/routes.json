@@ -7,6 +7,16 @@
     },
     {
         "method": "GET",
+        "pattern": "/classement",
+        "service": "Ranks::Show"
+    },
+    {
+        "method": "GET",
+        "pattern": "/boutique",
+        "service": "Shop::Main"
+    },
+    {
+        "method": "GET",
         "pattern": "/credits",
         "service": "Welcome::Credits"
     },

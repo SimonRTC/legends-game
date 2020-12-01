@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+.gold-deco {
+    background-image: url("/assets/img/shop/bourse-deco.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 8rem;
+    height: 8rem;
+}
+.coin-deco {
+    background-image: url("/assets/img/shop/coin-shop.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 2rem;
+    height: 2rem;
+}
+.h-100 {
+    background-image: url("/assets/img/shop/fond-bois-shop - Copie.jpg");
+    background-size: 100% 100%;
+    
+    border-radius: 11px;
+    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+
+}
+.h-100 a, h5 {
+    font-size: 0.9rem;
+    color:rgb(255, 255, 255);
+
+    text-decoration: none;
+    text-shadow: 2px 0 0 black, 2px 2px 0 black, 0 2px 0 black, -2px 2px 0 black, -2px 0 0 black, -2px -2px 0 black, 0 -2px 0 black, 2px -2px 0 black;
+    
+    display: inline-block;
+    padding: 1rem;
+
+    &:hover {
+        color :#ffc107;
+    }
+}
+
+//test firefly
+
+.fireflies{list-style:none
+}
+.pix{
+	background-size: cover;
+    background-image: url("/assets/img/shop/pix.png");
+
+    position:absolute;
+	width:21px; 
+	top:-20px;
+	height:21px;
+	
+	animation: 
+		leftright 24s infinite cubic-bezier(.39,.0,.63,1),
+		updown 8s infinite 1.25s cubic-bezier(.39,.0,.63,1)
+}
+.pix:nth-of-type(2){
+    animation-delay:4s;
+    animation-duration:17s, 8s;
+    animation-fill-mode:backwards, backwards 
+}
+.pix:nth-of-type(3){
+    animation-delay:1.5s;
+    animation-duration:14s, 7s;
+    animation-fill-mode:backwards, backwards
+}
+.pix:nth-of-type(4){
+    animation-delay:5.5s;
+    animation-duration:10s, 13s;
+}
+.pix:nth-of-type(5){
+    animation-fill-mode:backwards, backwards;
+    animation-duration:12s, 15s;
+}
+
+@keyframes leftright {
+    0%, 100%{left:20%;}
+    16.666%	{left:90%;}
+    33.333% {left:10%;}
+    50%	{left:50%;}
+    66.666%	{left:70%;}
+    83.333% {left:40%;}
+}
+
+@keyframes updown {
+    0%, 100%{top:0px;width:20px;height:20px}
+    25%{top:45%; }
+    50%{top:20%;width:30px;height:30px}
+    75%{top:45%;width:10px;height:10px }
+}

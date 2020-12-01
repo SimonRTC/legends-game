@@ -1,23 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap%27');
+
 .btn-parchment {
     font-size: 25px;
-    font-family: 'Dancing Script', cursive;
-    color : white;
-    text-shadow:0 1px 0 #060c0c;
-    background-image: url("/assets/img/shop/enteteNav.png");
+    font-family: 'Luckiest Guy', cursive;
+    text-shadow: 2px 0 0 black, 2px 2px 0 black, 0 2px 0 black, -2px 2px 0 black, -2px 0 0 black, -2px -2px 0 black, 0 -2px 0 black, 2px -2px 0 black;
+    background-image: url("/assets/img/buttons/button-parchment.png");
+    color:white;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
     &:hover {
-        color: #fdec6e;
-        text-shadow:0px 0px 30px #fdec6e;
-        -moz-transition: all 0.2s ease-in;
-        -o-transition: all 0.2s ease-in;
-        -webkit-transition: all 0.2s ease-in;
-        transition: all 0.2s ease-in;
-        text-decoration: none;
+        color :#ffc107;
     }
     &.btn-center {
         display: block;
         margin : auto;
+    }
+}
+@media screen and (max-width: 992px) { 
+    .btn-parchment {
+        background-image: none;
     }
 }
