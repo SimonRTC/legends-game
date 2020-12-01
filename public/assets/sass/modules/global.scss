@@ -1,16 +1,17 @@
 
 main.bg-parchment {
-    background-image: url("/assets/img/navigation/header-background.png");
+    background-image: url("/assets/img/navigation/header-background-small.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     
     margin: -2.6rem 0 0 0;
     padding: 2rem 0 0 0;
+    padding-bottom: 0.5rem;
 }
 
-@media screen and (max-width: 1300px) { 
+@media screen and (max-width: 1200px) { 
     main.bg-parchment {
         background-image: url("/assets/img/navigation/header-background-small.png");
-        background-size: auto;
+        background-size: cover;
     }
 } 

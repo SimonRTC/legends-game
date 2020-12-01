@@ -37,4 +37,10 @@
         "pattern": "/deconnexion",
         "service": "Account::Logout"
     }
+    {
+        "method": "GET",
+        "pattern": "/jeux",
+        "service": "Welcome::Welcome",
+        "cache": false
+    },
 ]
