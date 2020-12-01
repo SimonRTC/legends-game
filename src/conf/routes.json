@@ -12,6 +12,11 @@
     },
     {
         "method": "GET",
+        "pattern": "/boutique",
+        "service": "Shop::Main"
+    },
+    {
+        "method": "GET",
         "pattern": "/credits",
         "service": "Welcome::Credits"
     },

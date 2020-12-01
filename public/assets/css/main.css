@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap%27");
 .neon-effect {
@@ -181,17 +182,268 @@
 @media screen and (max-width: 992px) {
   .card-rank {
     margin-bottom: 0.5rem; } }
+.gold-deco {
+  background-image: url("/assets/img/shop/bourse-deco.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8rem;
+  height: 8rem; }
+
+.coin-deco {
+  background-image: url("/assets/img/shop/coin-shop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem; }
+
+.h-100 {
+  background-image: url("/assets/img/shop/fond-bois-shop - Copie.jpg");
+  background-size: 100% 100%;
+  border-radius: 11px;
+  filter: drop-shadow(0 0 0.75rem black);
+  font-family: 'Luckiest Guy', cursive;
+  text-align: center; }
+
+.h-100 a, h5 {
+  font-size: 0.9rem;
+  color: white;
+  text-decoration: none;
+  text-shadow: 2px 0 0 black, 2px 2px 0 black, 0 2px 0 black, -2px 2px 0 black, -2px 0 0 black, -2px -2px 0 black, 0 -2px 0 black, 2px -2px 0 black;
+  display: inline-block;
+  padding: 1rem; }
+  .h-100 a:hover, h5:hover {
+    color: #ffc107; }
+
+.fireflies {
+  list-style: none; }
+
+.pix {
+  background-size: cover;
+  background-image: url("/assets/img/shop/pix.png");
+  position: absolute;
+  width: 21px;
+  top: -20px;
+  height: 21px;
+  animation: leftright 24s infinite cubic-bezier(0.39, 0, 0.63, 1), updown 8s infinite 1.25s cubic-bezier(0.39, 0, 0.63, 1); }
+
+.pix:nth-of-type(2) {
+  animation-delay: 4s;
+  animation-duration: 17s, 8s;
+  animation-fill-mode: backwards, backwards; }
+
+.pix:nth-of-type(3) {
+  animation-delay: 1.5s;
+  animation-duration: 14s, 7s;
+  animation-fill-mode: backwards, backwards; }
+
+.pix:nth-of-type(4) {
+  animation-delay: 5.5s;
+  animation-duration: 10s, 13s; }
+
+.pix:nth-of-type(5) {
+  animation-fill-mode: backwards, backwards;
+  animation-duration: 12s, 15s; }
+
+@keyframes leftright {
+  0%, 100% {
+    left: 20%; }
+  16.666% {
+    left: 90%; }
+  33.333% {
+    left: 10%; }
+  50% {
+    left: 50%; }
+  66.666% {
+    left: 70%; }
+  83.333% {
+    left: 40%; } }
+@keyframes updown {
+  0%, 100% {
+    top: 0px;
+    width: 20px;
+    height: 20px; }
+  25% {
+    top: 45%; }
+  50% {
+    top: 20%;
+    width: 30px;
+    height: 30px; }
+  75% {
+    top: 45%;
+    width: 10px;
+    height: 10px; } }
+ul {
+  list-style: none;
+  margin: 0; }
+
+ul li {
+  text-align: left; }
+
+.decor-presentation {
+  position: relative;
+  text-align: center; }
+
+.decor-presentation h2 {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Dancing Script', cursive;
+  color: #fdec6e;
+  text-shadow: 0px 0px 30px #fdec6e;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  text-decoration: none; }
+
+.image-decoration {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.wood-1 {
+  margin-right: -30px;
+  margin-left: 30px; }
+
+.wood-3 {
+  margin-left: -22px; }
+
+@media screen and (max-width: 993px) {
+  .wood-1 {
+    margin-right: 0;
+    margin-left: 0; }
+
+  .wood-3 {
+    margin-left: 0; }
+
+  .responsiv-item-presentation {
+    flex-direction: column; } }
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer; }
+
+.popup .popuptext {
+  visibility: hidden;
+  background-image: url("/assets/img/navigation/header-background-small.png");
+  color: black;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-shadow: none;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 27%;
+  margin-left: -80px;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 0.3rem solid;
+  border-color: #493015; }
+
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent; }
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@media screen and (max-width: 993px) {
+  .popup .popuptext {
+    left: 13%; } }
+.close-popup {
+  position: absolute;
+  right: 4%;
+  top: 2%;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3; }
+
+.close-popup:hover {
+  opacity: 1; }
+
+.close-popup:before, .close-popup:after {
+  background-color: #333;
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px; }
+
+.close-popup:before {
+  transform: rotate(45deg); }
+
+.close-popup:after {
+  transform: rotate(-45deg); }
+
+.decor-top-left {
+  position: absolute;
+  top: -10%;
+  left: -15%; }
+
+.decor-bot-left {
+  position: absolute;
+  top: -14%;
+  left: -15%; }
+
+.decor-top-right {
+  position: absolute;
+  top: -10%;
+  left: 70%; }
+
+.decor-bot-right {
+  position: absolute;
+  top: -14%;
+  left: 70%; }
+
+@media screen and (max-width: 993px) {
+  .decor-top-left {
+    display: none; }
+
+  .decor-bot-left {
+    display: none; }
+
+  .decor-top-right {
+    display: none; }
+
+  .decor-bot-right {
+    display: none; } }
+hr.hr-style {
+  overflow: visible;
+  border-top: medium double #c7b304; }
+
 main.bg-parchment {
-  background-image: url("/assets/img/navigation/header-background.png");
+  background-image: url("/assets/img/navigation/header-background-small.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   margin: -2.6rem 0 0 0;
   padding: 2rem 0 4rem 0; }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1200px) {
   main.bg-parchment {
     background-image: url("/assets/img/navigation/header-background-small.png");
-    background-size: auto; } }
+    background-size: cover; } }
 .jumbotron.jumbotron-wood {
   background-image: url("/assets/img/navigation/jumbotron.jpg");
   background-size: cover;
@@ -251,16 +503,16 @@ ul.navbar-nav li.nav-item {
   .bd-placeholder-img-lg {
     font-size: 3.5rem; } }
 main.bg-parchment {
-  background-image: url("/assets/img/navigation/header-background.png");
+  background-image: url("/assets/img/navigation/header-background-small.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   margin: -2.6rem 0 0 0;
   padding: 2rem 0 4rem 0; }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1200px) {
   main.bg-parchment {
     background-image: url("/assets/img/navigation/header-background-small.png");
-    background-size: auto; } }
+    background-size: cover; } }
 .jumbotron.jumbotron-wood {
   background-image: url("/assets/img/navigation/jumbotron.jpg");
   background-size: cover;
@@ -279,18 +531,20 @@ main.bg-parchment {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1; }
-  .overlay.overlay-fullscreen {
-    height: 100vh; }
-  .overlay.overlay-landscape {
-    background-position: center;
-    background-image: url("/assets/img/navigation/overlay/landscape.jpg"); }
-  .overlay.overlay-ranks {
-    background-position: center;
-    background-image: url("/assets/img/navigation/overlay/ranks.jpg"); }
+  .overlay.overlay-shop {
+    background-image: url("/assets/img/navigation/overlay/banner-shop.jpg"); }
   .overlay .fadeout {
     width: 100%;
     height: 100%;
     background-color: rgba(20, 20, 20, 0.34); }
+    .overlay .fadeout.overlay-fullscreen {
+      height: 100vh; }
+    .overlay .fadeout.overlay-landscape {
+      background-position: center;
+      background-image: url("/assets/img/navigation/overlay/landscape.jpg"); }
+    .overlay .fadeout.overlay-ranks {
+      background-position: center;
+      background-image: url("/assets/img/navigation/overlay/ranks.jpg"); }
     .overlay .fadeout.fadeout-card {
       padding: 4rem 3rem;
       background-color: rgba(20, 20, 20, 0.26);
