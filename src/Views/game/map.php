@@ -1,7 +1,6 @@
-<br /><br /><br /><br /><br />
+<div id="g-container" class="g-main">
+    <canvas id="g-main"></canvas>
+</div>
 
-<?php foreach ($_DATAS_["CHAPTERS"] as $Chapter): ?>
-    <a href="<?= "/maps/chapter/{$Chapter->permalien}/" ?>"><?= $Chapter->name ?></a><br />
-<?php endforeach; ?>
 
-<br /><br /><br />
+<script src="/assets/js/game-map.js"></script>
