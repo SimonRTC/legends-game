@@ -7,6 +7,11 @@
     },
     {
         "method": "GET",
+        "pattern": "/classement",
+        "service": "Ranks::Show"
+    },
+    {
+        "method": "GET",
         "pattern": "/credits",
         "service": "Welcome::Credits"
     },
