@@ -19,6 +19,11 @@
         background-image: url("/assets/img/navigation/overlay/banner-shop.jpg");
     }
     
+    &.overlay-profile {
+        background-position: center;
+        background-image: url("/assets/img/navigation/overlay/profile.png");
+    }
+    
     .fadeout {
 
         &.overlay-fullscreen {
@@ -34,6 +39,8 @@
             background-position: center;
             background-image: url("/assets/img/navigation/overlay/ranks.jpg");
         }
+
+        
 
         width: 100%;
         height: 100%;

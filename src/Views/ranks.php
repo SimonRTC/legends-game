@@ -14,11 +14,11 @@
             <div class="row justify-content-center">
                 <div class="col-xl-3 col-lg-4 col-md-7 card-rank">
                     <fieldset class="wood">
-                        <div class="card bg_card_one">
+                        <div class="card truc bg_card_one">
                             <img class="card-img-top" src="/assets/img/ranks/person-male.png" alt="No one">
                             <div class="divider"></div>
                             <div class="card-body">
-                                <h5 class="card-title">#1 Légende</h5>
+                                <h6 class="card-title">#1 Légende</h6>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-parchment btn-center">Voir</a>
                             </div>
@@ -27,11 +27,11 @@
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-7 card-rank">
                     <fieldset class="wood">
-                        <div class="card bg_card_two">
+                        <div class="card truc bg_card_two">
                             <img class="card-img-top" src="/assets/img/ranks/person-male.png" alt="No one">
                             <div class="divider"></div>
                             <div class="card-body">
-                                <h5 class="card-title">#2 Héro</h5>
+                                <h6 class="card-title">#2 Héro</h6>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-parchment btn-center">Voir</a>
                             </div>
@@ -40,11 +40,11 @@
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-7 card-rank">
                     <fieldset class="wood">
-                        <div class="card bg_card_three">
+                        <div class="card truc bg_card_three">
                             <img class="card-img-top" src="/assets/img/ranks/person-male.png" alt="No one">
                             <div class="divider"></div>
                             <div class="card-body">
-                                <h5 class="card-title">#3 Champion</h5>
+                                <h6 class="card-title">#3 Champion</h6>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-parchment btn-center">Voir</a>
                             </div>
@@ -61,11 +61,11 @@
             <div class="row justify-content-center">
                 <div class="col-xl-3 col-lg-4 col-md-7 card-rank">
                     <fieldset class="wood">
-                        <div class="card bg_next">
+                        <div class="card truc bg_next">
                             <img class="card-img-top" src="/assets/img/ranks/person-male.png" alt="No one">
                             <div class="divider"></div>
                             <div class="card-body">
-                                <h5 class="card-title">#4 Aventurier</h5>
+                                <h6 class="card-title">#4 Aventurier</h6>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-parchment btn-center">Voir</a>
                             </div>
@@ -74,11 +74,11 @@
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-7 card-rank">
                     <fieldset class="wood">
-                        <div class="card  bg_next">
+                        <div class="card truc bg_next">
                             <img class="card-img-top" src="/assets/img/ranks/person-male.png" alt="No one">
                             <div class="divider"></div>
                             <div class="card-body">
-                                <h5 class="card-title">#5 Aventurier</h5>
+                                <h6 class="card-title">#5 Aventurier</h6>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-parchment btn-center">Voir</a>
                             </div>
@@ -87,11 +87,11 @@
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-7 card-rank">
                     <fieldset class="wood">
-                        <div class="card  bg_next">
+                        <div class="card truc bg_next">
                             <img class="card-img-top" src="/assets/img/ranks/person-male.png" alt="No one">
                             <div class="divider"></div>
                             <div class="card-body">
-                                <h5 class="card-title">#6 Aventurier</h5>
+                                <h6 class="card-title">#6 Aventurier</h6>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-parchment btn-center">Voir</a>
                             </div>

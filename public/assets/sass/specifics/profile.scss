@@ -1,0 +1,161 @@
+.container.profile-container{
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.container.profile-container-2{
+    position: relative;
+    display: flex;
+    justify-content: center;;
+}
+
+.class-player-profile{
+    position: relative;
+    text-align: center;
+
+    .profile-pseudo {
+        position: absolute;
+        font-family: 'Luckiest Guy', cursive;
+        text-shadow: 2px 0 0 black, 2px 2px 0 black, 0 2px 0 black, -2px 2px 0 black, -2px 0 0 black, -2px -2px 0 black, 0 -2px 0 black, 2px -2px 0 black;
+        color: white;
+        text-align: center;
+    
+        top: 10%;
+        left: 35%;
+    }
+} 
+
+.inventory-profile{
+    background-image: url("/assets/img/profile/wood-border-profile.png");
+    background-color: rgba(225,225,225, 0.33);
+    background-size: 100% 100%;
+    text-align: center;
+
+    padding: 20px;
+    border-radius: 11px;
+
+    font-family: 'Luckiest Guy', cursive;
+    text-shadow: 2px 0 0 black, 2px 2px 0 black, 0 2px 0 black, -2px 2px 0 black, -2px 0 0 black, -2px -2px 0 black, 0 -2px 0 black, 2px -2px 0 black;
+    color: white;
+
+    .list-inventory-profile{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 1199px) { 
+    .inventory-profile-title{
+        font-size: x-large;
+    }
+}
+
+.skin-inventory-profile{
+    background-image: url("/assets/img/profile/wood-border-profile.png");
+    background-color: rgba(225,225,225, 0.33);
+    background-size: 100% 100%;
+    text-align: center;
+
+    padding: 20px;
+    border-radius: 11px;
+}
+
+.content-profile {
+    position: relative;
+    text-align: center;
+
+    background-image: url("/assets/img/profile/wood-bg-profile.jpg");
+    background-size: 100% 100%;
+    border-radius: 11px;
+    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    padding-top: 1.3rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    height: 300px;
+    
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 0.9rem;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 0 0 black, 2px 2px 0 black, 0 2px 0 black, -2px 2px 0 black, -2px 0 0 black, -2px -2px 0 black, 0 -2px 0 black, 2px -2px 0 black;
+}
+
+.image-player-profile{
+    background-image: url("/assets/img/profile/wood-border-profile.png");
+    background-color: rgba(225,225,225, 0.33);
+    background-size: 100% 100%;
+
+    padding: 15px;
+    border-radius: 11px;
+}
+
+.skin-profile-title{
+    font-family: 'Luckiest Guy', cursive;
+    text-shadow: 2px 0 0 black, 2px 2px 0 black, 0 2px 0 black, -2px 2px 0 black, -2px 0 0 black, -2px -2px 0 black, 0 -2px 0 black, 2px -2px 0 black;
+    color: white;
+}
+
+.skin-img-profile{
+    border: solid 0.1rem;
+    border-color: rgb(83, 41, 13);
+}
+
+.container-tree-profile{
+    position: absolute;
+    top: 102%;
+    left: 45%;
+}
+
+.tree-profile{
+    width: 1000px;
+    height: 1000px;
+}
+
+.container-house-profile{
+    position: absolute;
+}
+
+.house-profile{
+    width: 500px;
+    height: 500px;
+}
+
+@media screen and (max-width: 1199px) { 
+    .container-tree-profile{
+        position: absolute;
+        top: 157%;
+        left: 28%;
+    }
+
+    .tree-profile{
+        width: 700px;
+        height: 700px;
+    }
+}
+
+@media screen and (min-width: 1199px) and (max-width: 1680px) { 
+    .container-tree-profile{
+        position: absolute;
+        top: 132%;
+        left: 40%;
+    }
+    
+    .tree-profile{
+        width: 700px;
+        height: 700px;
+    }
+}
+
+@media screen and (max-width: 992px) { 
+    .container-tree-profile{
+        display: none;
+    }
+
+    .container-house-profile{
+        display: none;
+    }
+}

@@ -12,10 +12,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <div class="card card-parchment mb-4 chest">
+                <div class="card chose card-parchment mb-4 chest">
                     <div class="card-body">
                         <div class="card-block displayText">
-                            <h5 class="card-title">Sibel Urbain</h5>
+                            <h6 class="card-title">Sibel Urbain</h6>
                             <p class="card-text"><span class="text-expose">UI Designer</span> & <span class="text-expose">Game Designer</span></p>
                             <a href="https://www.linkedin.com/in/sibel-urbain-a94a8b1b6/" target="_blank" class="btn btn-sm btn-primary btn-block"><i class="fab fa-linkedin mr-2"></i>Linkedin</a>
                             <a href="https://github.com/UrbainSibel" target="_blank" class="btn btn-sm btn-dark btn-block"><i class="fab fa-github mr-2"></i>GitHub</a>
@@ -24,10 +24,10 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card card-parchment mb-4 chest">
+                <div class="card chose card-parchment mb-4 chest">
                     <div class="card-body">
                     <div class="card-block displayText">
-                            <h5 class="card-title">Axel Guihard</h5>
+                            <h6 class="card-title">Axel Guihard</h6>
                             <p class="card-text"><span class="text-expose">UI Designer</span> & <span class="text-expose">Mascotte</span></p>
                             <a href="https://www.linkedin.com/in/axel-guihard44/" target="_blank" class="btn btn-sm btn-primary btn-block"><i class="fab fa-linkedin mr-2"></i>Linkedin</a>
                             <a href="https://github.com/AxelGhd" target="_blank" class="btn btn-sm btn-dark btn-block"><i class="fab fa-github mr-2"></i>GitHub</a>
@@ -36,10 +36,10 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card card-parchment mb-4 chest">
+                <div class="card chose card-parchment mb-4 chest">
                     <div class="card-body">
                     <div class="card-block displayText">
-                            <h5 class="card-title">Simon Malpel</h5>
+                            <h6 class="card-title">Simon Malpel</h6>
                             <p class="card-text"><span class="text-expose">Backend</span> & <span class="text-expose">Ops</span></p>
                             <a href="https://twitter.com/simonmalpel" target="_blank" class="btn btn-sm btn-primary btn-block"><i class="fab fa-twitter mr-2"></i>Twitter</a>
                             <a href="https://github.com/SimonRTC" target="_blank" class="btn btn-sm btn-dark btn-block"><i class="fab fa-github mr-2"></i>GitHub</a>
@@ -56,31 +56,31 @@
                 <div class="row">
                     <div class="col-md-4 mb-4">
                         <div class="text-center">
-                            <h5><i class="far fa-user mr-3"></i>Matthieu Lamamra</h5>
+                            <h6><i class="far fa-user mr-3"></i>Matthieu Lamamra</h6>
                             <p class="badge badge-dark">Git et Ops</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="text-center">
-                            <h5><i class="far fa-user mr-3"></i>Stéphane Menut</h5>
+                            <h6><i class="far fa-user mr-3"></i>Stéphane Menut</h6>
                             <p class="badge badge-dark">jQuery & Bootstrap</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="text-center">
-                        <h5><i class="far fa-user mr-3"></i>Loic Godin</h5>
+                        <h6><i class="far fa-user mr-3"></i>Loic Godin</h6>
                             <p class="badge badge-dark">HTML & CSS & JS</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="text-center">
-                            <h5><i class="far fa-user mr-3"></i>Pierre Brétéché</h5>
+                            <h6><i class="far fa-user mr-3"></i>Pierre Brétéché</h6>
                             <p class="badge badge-dark">PHP</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="text-center">
-                            <h5><i class="far fa-building mr-3"></i>Dawan</h5>
+                            <h6><i class="far fa-building mr-3"></i>Dawan</h6>
                             <p class="badge badge-dark">Soutien logistique</p>
                         </div>
                     </div>
