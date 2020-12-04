@@ -46,5 +46,10 @@
         "method": "GET",
         "pattern": "/deconnexion",
         "service": "Account::Logout"
+    },
+    {
+        "method": "GET",
+        "pattern": "/game",
+        "service": "GameScene::Scene"
     }
 ]

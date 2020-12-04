@@ -19,6 +19,15 @@
         background-image: url("/assets/img/navigation/overlay/banner-shop.jpg");
     }
     
+    &.overlay-ranks{
+        background-image: url("/assets/img/navigation/overlay/ranks.jpg");
+    }
+    &.overlay-scene {
+        background-image: url("/assets/img/navigation/overlay/scene.jpg");
+    }
+    &.overlay-landscape{
+        background-image: url("/assets/img/navigation/overlay/landscape.jpg");
+    }
     .fadeout {
 
         &.overlay-fullscreen {
@@ -34,6 +43,7 @@
             background-position: center;
             background-image: url("/assets/img/navigation/overlay/ranks.jpg");
         }
+        
 
         width: 100%;
         height: 100%;

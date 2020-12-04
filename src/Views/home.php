@@ -13,7 +13,7 @@
 
     <div class="container">
     
-        <div class="row featurette">
+        <div class="row">
             
             <div class="col-md-12 mt-5">
 
@@ -49,7 +49,7 @@
                         <h1>Humain</h1>
                         <p class="lead"> Les humains vivent surtout dans la citadelle de Bilgewater, mais il n'est pas rare d'en croiser un peu partout ailleurs.
                         <hr class="hr-style">
-                            <h2 >Héritage :</h2>
+                            <h2>Héritage :</h2>
                             Vous démarrez l’aventure avec 100 po de plus que les autres !
                         </p>
                     </span> 
@@ -66,10 +66,10 @@
                     <span class="popuptext" id="myPopup2">
                         <span class="close-popup"></span>
                         <h1>Elfe</h1>
-                        <p class="lead"> Les humains vivent surtout dans la citadelle de Bilgewater, mais il n'est pas rare d'en croiser un peu partout ailleurs.
+                        <p class="lead"> Les Elfes viennent des forets de Mist Island, au Nord de Kappa, ils sont moins nombreux mais vivent plus longtemps.
                         <hr class="hr-style">
-                            <h2 >Héritage :</h2>
-                            Vous démarrez l’aventure avec 100 po de plus que les autres !
+                            <h2>Agile :</h2>
+                            Vous avez plus de chance de pouvoir vous enfuir d'un combat !
                         </p>
                     </span> 
                 </div>
@@ -87,8 +87,8 @@
                         <h1>Nain</h1>
                         <p class="lead"> Les nains vivent dans des villes creusée au coeur des montagnes des Caucausius Montains, au Nord-Ouest de Kappa.
                         <hr class="hr-style">
-                            <h2 >Héritage :</h2>
-                            Vous démarrez l’aventure avec 100 po de plus que les autres !
+                            <h2> Glouton :</h2>
+                            La nouriture et les potions vous rendent tout vos PV.
                         </p>
                     </span> 
                 </div>
@@ -102,7 +102,7 @@
             <div class="col-lg-4 wood-1 mb-4">
                 <div class="decor-presentation">
                     <img src="/assets/img/home/wood-bar-1" alt="">
-                    <img class="rounded-circle image-decoration" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                    <img class="rounded-circle image-decoration" src="/assets/img/characters/class/warrior.png" alt="warrior image" width="140" height="140">
                     <h2>Guerrier</h2>
                 </div>
                 <div class="btn-parchment d-flex justify-content-center popup" role="button" onclick="showText4()"> Voir
@@ -129,7 +129,7 @@
             <div class="col-lg-4 mb-4">
                 <div class="decor-presentation">
                     <img src="/assets/img/home/wood-bar-2" alt="">
-                    <img class="rounded-circle image-decoration" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                    <img class="rounded-circle image-decoration" src="/assets/img/characters/class/mage.png" alt="mage image" width="140" height="140">
                     <h2>Mage</h2>
                 </div>
                 <div class="btn-parchment d-flex justify-content-center popup" role="button" onclick="showText5()"> Voir
@@ -156,7 +156,7 @@
             <div class="col-lg-4 wood-3 mb-4">
                 <div class="decor-presentation">
                     <img src="/assets/img/home/wood-bar-3" alt="">
-                    <img class="rounded-circle image-decoration" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                    <img class="rounded-circle image-decoration" src="/assets/img/characters/class/archer.png" alt="archer image" width="140" height="140">
                     <h2>Guerrier</h2>
                 </div>
                 <div class="btn-parchment d-flex justify-content-center popup" role="button" onclick="showText6()"> Voir
