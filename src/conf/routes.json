@@ -51,5 +51,10 @@
         "method": "GET",
         "pattern": "/profile",
         "service": "Profile::Profile"
+    },
+    {
+        "method": "GET",
+        "pattern": "/game",
+        "service": "GameScene::Scene"
     }
 ]
