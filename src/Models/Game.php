@@ -45,6 +45,9 @@ class Game {
             $action     = $this->Actions->{$action} ?? null;
             $parameters = $matches[1] ?? null;
             $parameters = (!empty($matches[1])? explode(",", $matches[1]): []);
+            foreach ($parameters as &$parameter) {
+                $parameter = trim($parameter);
+            }
             if (!empty($action)) {
                 $action($parameters);
             }
