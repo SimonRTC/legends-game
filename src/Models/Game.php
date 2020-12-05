@@ -30,6 +30,27 @@ class Game {
         }
         return $characters;
     }
+
+    /**
+     * Execute action string
+     * 
+     * @param string $actions
+     * @return array
+     */
+    public function ExecActions(string $actions): void {
+        $actions = explode(";", $actions);
+        foreach ($actions as $action) {
+            preg_match('/\[(.*)\]/', $action, $matches);
+            $action     = (!empty($matches[1])? str_replace($matches[0], null, $action): $action);
+            $action     = $this->Actions->{$action} ?? null;
+            $parameters = $matches[1] ?? null;
+            $parameters = (!empty($matches[1])? explode(",", $matches[1]): []);
+            if (!empty($action)) {
+                $action($parameters);
+            }
+        }
+        return;
+    }
         
     /**
      * Parse actions commands

@@ -13,7 +13,7 @@ class Questions {
     public function GoToNextQuestion(array $parameters): void {
         $next = (!empty($parameters["NEXT_TAG"])? $parameters["NEXT_TAG"]: null);
         
-        dump($next);
+        dd($next);
 
         return;
     }
