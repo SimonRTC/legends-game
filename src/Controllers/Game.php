@@ -41,7 +41,7 @@ class Game {
                     $question->characters = $this->Game->GetCharacters($question->characters);
                     if ($question->tag == $plytag) {
                         // dd($question);
-                        $Response->load("game/gameScene", [
+                        $Response->load("game/scene", [
                             "permalien" => $permalien,
                             "CHAPTER"   => $chapter->name,
                             "QUESTION"  => $question

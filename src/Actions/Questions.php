@@ -11,7 +11,7 @@ class Questions {
      * @return void
      */
     public function GoToNextQuestion(array $parameters): void {
-        $next = (!empty($parameters["NEXT_TAG"])? $parameters["NEXT_TAG"]: null);
+        $next = $parameters[0] ?? null;
         
         dd($next);
 
