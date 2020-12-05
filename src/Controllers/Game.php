@@ -33,7 +33,7 @@ class Game {
      */
     public function Scene(\LegendsGame\Response $Response, array $Binded = []): void {
         $permalien  = $Binded["permalien"] ?? null;
-        $plytag     = $_ACCOUNT_->Player->lvltag ?? "0.0.0";
+        $plytag     = (!isset($_SESSION["_PLAYER_REAL_TAG"])? $_ACCOUNT_->Player->lvltag ?? "0.0.0": $_SESSION["_PLAYER_REAL_TAG"]);
         $Chapters   = $this->Game->Chapters;
         foreach ($Chapters as $chapter) {
             if ($chapter->permalien == $permalien) {

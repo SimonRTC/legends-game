@@ -2,7 +2,7 @@
 
 namespace LegendsGame\Actions;
 
-class Questions {
+class Questions extends \LegendsGame\Game {
     
     /**
      * Go to next question
@@ -12,9 +12,13 @@ class Questions {
      */
     public function GoToNextQuestion(array $parameters): void {
         $next = $parameters[0] ?? null;
-        
-        dd($next);
-
+        if (!empty($next)) {
+            $_SESSION["_PLAYER_REAL_TAG"] = $next;
+            $this->Database->Request("UPDATE `players` SET level = :level WHERE uuid = :uuid", [
+                "uuid"  => $_SESSION["_ACCOUNT_"]->Player->identifier,
+                "level" => $next
+            ]);
+        }
         return;
     }
 

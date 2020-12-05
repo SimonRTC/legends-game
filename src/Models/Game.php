@@ -7,7 +7,7 @@ class Game {
     public  $Chapters;
     public  $Characters;
     public  $Actions;
-    private $Database;
+    public  $Database;
     private $GameCore;
 
     public function __construct() {
@@ -66,7 +66,7 @@ class Game {
                     $callable = new $class();
                     $callable = $callable->{$function}($parameters);
                     if ($action->refresh && !headers_sent()) {
-                        header("Refresh: 0");
+                        header("Location: " . (isset($_SERVER['HTTP_REFERER']) && !empty($_SERVER['HTTP_REFERER'])? $_SERVER['HTTP_REFERER']: "/game/"));
                     }
                 } catch (\Throwable $e) {
                     dump("ACTION DEBUG:", $e);
