@@ -89,6 +89,10 @@
 				<div class="container">
 
 					<div class="content-game"><?= $_DATAS_["QUESTION"]->narration ?></div>
+					<?php foreach ($_DATAS_["QUESTION"]->characters as $character): ?>
+						<span class="d-block text-muted"><u><?= $character->name ?>:</u></span>
+						<div class="content-game">« <?= $character->dialogue ?> »</div>
+					<?php endforeach; ?>
 
 					<hr class="hr-style mb-4">
 
