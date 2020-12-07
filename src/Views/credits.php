@@ -14,8 +14,8 @@
             <div class="col-md-4">
                 <div class="card chose card-parchment mb-4 chest">
                     <div class="card-body">
-                        <div class="card-block displayText">
-                            <h6 class="card-title">Sibel Urbain</h6>
+                        <div class="card-block displayText bg-hover-credits">
+                            <h6 class="card-title oi">Sibel Urbain</h6>
                             <p class="card-text"><span class="text-expose">UI Designer</span> & <span class="text-expose">Game Designer</span></p>
                             <a href="https://www.linkedin.com/in/sibel-urbain-a94a8b1b6/" target="_blank" class="btn btn-sm btn-primary btn-block"><i class="fab fa-linkedin mr-2"></i>Linkedin</a>
                             <a href="https://github.com/UrbainSibel" target="_blank" class="btn btn-sm btn-dark btn-block"><i class="fab fa-github mr-2"></i>GitHub</a>
@@ -26,7 +26,7 @@
             <div class="col-md-4">
                 <div class="card chose card-parchment mb-4 chest">
                     <div class="card-body">
-                    <div class="card-block displayText">
+                    <div class="card-block displayText bg-hover-credits">
                             <h6 class="card-title">Axel Guihard</h6>
                             <p class="card-text"><span class="text-expose">UI Designer</span> & <span class="text-expose">Mascotte</span></p>
                             <a href="https://www.linkedin.com/in/axel-guihard44/" target="_blank" class="btn btn-sm btn-primary btn-block"><i class="fab fa-linkedin mr-2"></i>Linkedin</a>
@@ -38,7 +38,7 @@
             <div class="col-md-4">
                 <div class="card chose card-parchment mb-4 chest">
                     <div class="card-body">
-                    <div class="card-block displayText">
+                    <div class="card-block displayText bg-hover-credits">
                             <h6 class="card-title">Simon Malpel</h6>
                             <p class="card-text"><span class="text-expose">Backend</span> & <span class="text-expose">Ops</span></p>
                             <a href="https://twitter.com/simonmalpel" target="_blank" class="btn btn-sm btn-primary btn-block"><i class="fab fa-twitter mr-2"></i>Twitter</a>

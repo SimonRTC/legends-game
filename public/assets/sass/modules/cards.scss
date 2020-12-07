@@ -46,8 +46,13 @@
 
     .displayText{
         visibility: visible;
-
     }
+}
+
+.bg-hover-credits{
+    background-image: url("/assets/img/credits/wood-bg-credits.png");
+    background-size: 100% 100%;
+    padding: 15px;
 }
 
 .chatBox{
