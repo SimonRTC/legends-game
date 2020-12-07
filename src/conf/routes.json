@@ -22,14 +22,20 @@
     },
     {
         "method": "GET",
-        "pattern": "/maps",
-        "service": "Game::ShowMap",
+        "pattern": "/game/",
+        "service": "Game::ListScene",
         "auth": true
     },
     {
-        "method": "GET|POST",
-        "pattern": "/maps/chapter/{permalien}",
-        "service": "Game::ShowLevel",
+        "method": "GET",
+        "pattern": "/game/{permalien}",
+        "service": "Game::Scene",
+        "auth": true
+    },
+    {
+        "method": "GET",
+        "pattern": "/game/{permalien}/{question}",
+        "service": "Game::doIt",
         "auth": true
     },
     {
@@ -51,10 +57,5 @@
         "method": "GET",
         "pattern": "/profile",
         "service": "Profile::Profile"
-    },
-    {
-        "method": "GET",
-        "pattern": "/game",
-        "service": "GameScene::Scene"
     }
 ]

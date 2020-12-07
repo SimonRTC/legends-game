@@ -25,12 +25,19 @@ class Account {
         $Player = $response->fetch();
         if (!empty($Player)) {
             if ($Player["password"] == $password) {
-                $_SESSION["_ACCOUNT_"] = (object) [
+                $Player["stats"]         = (!empty($Player["stats"])? json_decode($Player["stats"], false): []);
+                $_SESSION["_ACCOUNT_"]  = (object) [
                     "Player"        => (object) [
                         "identifier"    => $Player["uuid"],
                         "username"      => $Player["username"],
                         "email"         => $Player["email"],
                         "lvltag"        => $Player["lvltag"],
+                        "stats"         => (object) [
+                            "endurance"     => $Player["stats"]->endurance ?? 10,
+                            "strength"      => $Player["stats"]->strength ?? 10,
+                            "agility"       => $Player["stats"]->agility ?? 10,
+                            "intelligence"  => $Player["stats"]->intelligence ?? 10
+                        ],
                         "character"     => (object) [
                             "name"  => $Player["character_name"],
                             "skin"  => (!empty($Player["skin"])? json_decode($Player["skin"], false): [])

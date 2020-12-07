@@ -2,7 +2,7 @@
 
 namespace LegendsGame\Actions;
 
-class Dices {
+class Dices extends Questions {
     
     /**
      * Roll a dice
@@ -11,12 +11,16 @@ class Dices {
      * @return void
      */
     public function RollDice(array $parameters): void {
-        $type       = (!empty($parameters["DICE_TYPE"])? $parameters["DICE_TYPE"]: null);
-        $successful = (!empty($parameters["SUCESSFULL_TAG"])? $parameters["SUCESSFULL_TAG"]: null);
-        $failure    = (!empty($parameters["FAILURE_TAG"])? $parameters["FAILURE_TAG"]: null);
-        
-        dump($type, $successful, $failure);
-
+        $dice       = rand(1, 20);
+        $type       = $parameters[0] ?? null;
+        $PlayerStat = (float) $_SESSION["_ACCOUNT_"]->Player->stats->{strtolower($type)} ?? 0;
+        $successful = $parameters[1] ?? null;
+        $failure    = $parameters[2] ?? null;
+        if ($PlayerStat <= $dice) {
+            $this->GoToNextQuestion([ $successful ]);
+            return;
+        }
+        $this->GoToNextQuestion([ $failure ]);
         return;
     }
 

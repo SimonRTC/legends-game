@@ -3,33 +3,68 @@
 namespace LegendsGame\Controllers;
 
 class Game {
+    
+    private $Game;
 
     public function __construct() {
         $this->Game = new \LegendsGame\Game;
     }
 
     /**
-     * Show map
+     * Liste game scenes
      *
      * @param  object $Response
      * @param  array $Binded
      * @return void
      */
-    public function ShowMap(\LegendsGame\Response $Response, array $Binded = []): void {
-        $Response->load("game/map", [
-            "CHAPTERS" => $this->Game->Chapters
-        ], [], [ false, false ]);
+    public function ListScene(\LegendsGame\Response $Response, array $Binded = []): void {
+        $plytag     = $_ACCOUNT_->Player->lvltag ?? "0.0.0";
+        $Chapters   = $this->Game->Chapters;
+        dd($Chapters);
+        return;
+    }
+        
+    /**
+     * Game Scene
+     *
+     * @param  object $Response
+     * @param  array $Binded
+     * @return void
+     */
+    public function Scene(\LegendsGame\Response $Response, array $Binded = []): void {
+        $permalien  = $Binded["permalien"] ?? null;
+        $plytag     = (!isset($_SESSION["_PLAYER_REAL_TAG"])? $_ACCOUNT_->Player->lvltag ?? "0.0.0": $_SESSION["_PLAYER_REAL_TAG"]);
+        $Chapters   = $this->Game->Chapters;
+        foreach ($Chapters as $chapter) {
+            if ($chapter->permalien == $permalien) {
+                foreach ($chapter->questions as $question) {
+                    $question->characters = $this->Game->GetCharacters($question->characters);
+                    if ($question->tag == $plytag) {
+                        // dd($question);
+                        $Response->load("game/scene", [
+                            "permalien" => $permalien,
+                            "CHAPTER"   => $chapter->name,
+                            "QUESTION"  => $question
+                        ]);
+                        return;
+                    }
+                }
+            }
+        }
+        die("ERROR!");
+        return;
     }
 
     /**
-     * Show level
+     * Execute game scene action
      *
      * @param  object $Response
      * @param  array $Binded
      * @return void
      */
-    public function ShowLevel(\LegendsGame\Response $Response, array $Binded = [], ?object $_ACCOUNT_): void {
+    public function doIt(\LegendsGame\Response $Response, array $Binded = []): void {
         $permalien  = $Binded["permalien"] ?? null;
+        $qid        = $Binded["question"] ?? null;
         $plytag     = $_ACCOUNT_->Player->lvltag ?? "0.0.0";
         $Chapters   = $this->Game->Chapters;
         foreach ($Chapters as $chapter) {
@@ -37,14 +72,17 @@ class Game {
                 foreach ($chapter->questions as $question) {
                     $question->characters = $this->Game->GetCharacters($question->characters);
                     if ($question->tag == $plytag) {
-                        $Response->load("game/scene", [
-                            "CHAPTER"   => $chapter->name,
-                            "QUESTION"  => $question
-                        ]);
+                        $question = $question->responses[$qid] ?? null;
+                        if (!empty($question)) {
+                            $this->Game->ExecActions($question->actions);
+                            break;
+                        }
                     }
                 }
             }
         }
+        die("END!");
+        return;
     }
 
 }
