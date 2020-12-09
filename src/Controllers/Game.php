@@ -34,7 +34,7 @@ class Game {
      */
     public function Scene(\LegendsGame\Response $Response, array $Binded = []): void {
         $permalien  = $Binded["permalien"] ?? null;
-        $plytag     = (!isset($_SESSION["_PLAYER_REAL_TAG"])? $_ACCOUNT_->Player->lvltag ?? "0.0.0": $_SESSION["_PLAYER_REAL_TAG"]);
+        $plytag     = $_SESSION["_ACCOUNT_"]->Player->lvltag ?? "0.0.0";
         $Chapters   = $this->Game->Chapters;
         foreach ($Chapters as $chapter) {
             if ($chapter->permalien == $permalien) {
@@ -66,17 +66,15 @@ class Game {
     public function doIt(\LegendsGame\Response $Response, array $Binded = []): void {
         $permalien  = $Binded["permalien"] ?? null;
         $qid        = $Binded["question"] ?? null;
-        $plytag     = $_ACCOUNT_->Player->lvltag ?? "0.0.0";
+        $plytag     = $_SESSION["_ACCOUNT_"]->Player->lvltag ?? "0.0.0";
         $Chapters   = $this->Game->Chapters;
         foreach ($Chapters as $chapter) {
             if ($chapter->permalien == $permalien) {
                 foreach ($chapter->questions as $question) {
-                    $question->characters = $this->Game->GetCharacters($question->characters);
                     if ($question->tag == $plytag) {
                         $question = $question->responses[$qid] ?? null;
                         if (!empty($question)) {
                             $this->Game->ExecActions($question->actions);
-                            break;
                         }
                     }
                 }

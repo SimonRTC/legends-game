@@ -25,8 +25,11 @@
 			</div>
 			<div class="header-text">
 				<h1><?= $_DATAS_["CHAPTER"] ?></h1>
-				<span><?= $_ACCOUNT_->Player->username ?><?= (!empty($_ACCOUNT_->Player->character->name)? " | Alias, {$_ACCOUNT_->Player->character->name}": null) ?></span>
-				<span>{{Classe}}</span>
+				<span><?= $_ACCOUNT_->Player->username ?></span>
+				<span>
+					<?= ($_ACCOUNT_->Player->character->name == "ELF"? "Elfe": ($_ACCOUNT_->Player->character->name == "DWARF"? "Nain": ($_ACCOUNT_->Player->character->name == "HUMAN"? "Humain": null))) ?>
+					<?= (!empty($_ACCOUNT_->Player->character->class)? "- ": null) . ($_ACCOUNT_->Player->character->class == "WAR"? "Guerrier": ($_ACCOUNT_->Player->character->class == "MAGE"? "Mage": ($_ACCOUNT_->Player->character->class == "ARCHER"? "Archer": null))) ?>
+				</span>
 				<span>Lvl: <?= (!empty($_ACCOUNT_->Player->lvltag)? (string) $_ACCOUNT_->Player->lvltag: "0.0.0") ?></span>
 			</div>
 
@@ -57,11 +60,11 @@
 
 					<tr>
 						<td></td>
-						<td>27</td>
-						<td>27</td>
-						<td>10</td>
-						<td>10</td>
-						<td>29</td>
+						<td><?= $_ACCOUNT_->Player->stats->endurance ?></td>
+						<td><?= $_ACCOUNT_->Player->stats->strength ?></td>
+						<td><?= $_ACCOUNT_->Player->stats->agility ?></td>
+						<td><?= $_ACCOUNT_->Player->stats->intelligence ?></td>
+						<td>25</td>
 						<td>
 							<div class="inventory popup" role="button" onclick="showInventory()">
 							<img src="/assets/img/scene/inventory-bag.png" alt="" width="50" height="50">

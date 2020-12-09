@@ -4,13 +4,24 @@
         "parameters": [ "NEXT_TAG" ],
         "callable": "\\LegendsGame\\Actions\\Questions::GoToNextQuestion"
     },
+    "NEXT_CHAPTER": {
+        "refresh": false,
+        "parameters": [ "NEXT_TAG" ],
+        "callable": "\\LegendsGame\\Actions\\Questions::NextChapter"
+    },
     "DICE_ROLL": {
         "refresh": true,
         "parameters": [ "DICE_TYPE", "SUCESSFULL_TAG", "FAILURE_TAG" ],
         "callable": "\\LegendsGame\\Actions\\Dices::RollDice"
     },
     "DEFINE_PLAYER_MODEL": {
+        "refresh": false,
         "parameters": [ "MODEL" ],
         "callable": "\\LegendsGame\\Actions\\Player::DefineModel"
+    },
+    "DEFINE_PLAYER_CLASS": {
+        "refresh": false,
+        "parameters": [ "CLASS" ],
+        "callable": "\\LegendsGame\\Actions\\Player::DefineClass"
     }
 }
