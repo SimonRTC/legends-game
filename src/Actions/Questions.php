@@ -13,12 +13,37 @@ class Questions extends \LegendsGame\Game {
     public function GoToNextQuestion(array $parameters): void {
         $next = $parameters[0] ?? null;
         if (!empty($next)) {
-            $_SESSION["_PLAYER_REAL_TAG"] = $next;
             $this->Database->Request("UPDATE `players` SET level = :level WHERE uuid = :uuid", [
                 "uuid"  => $_SESSION["_ACCOUNT_"]->Player->identifier,
                 "level" => $next
             ]);
+            $Account                        = new \LegendsGame\Account;
+            $PlayerAccount                  = $_SESSION["_ACCOUNT_"];
+            $PlayerAccount->Player->lvltag  = $next;
+            $Account->ReloadPlayerAccount($PlayerAccount);
         }
+        return;
+    }
+
+    /**
+     * Go to next chapter
+     *
+     * @param  array $parameters
+     * @return void
+     */
+    public function NextChapter(array $parameters): void {
+        $next = $parameters[0] ?? null;
+        if (!empty($next)) {
+            $this->Database->Request("UPDATE `players` SET level = :level WHERE uuid = :uuid", [
+                "uuid"  => $_SESSION["_ACCOUNT_"]->Player->identifier,
+                "level" => $next
+            ]);
+            $Account                        = new \LegendsGame\Account;
+            $PlayerAccount                  = $_SESSION["_ACCOUNT_"];
+            $PlayerAccount->Player->lvltag  = $next;
+            $Account->ReloadPlayerAccount($PlayerAccount);
+        }
+        header("Location: /game/");
         return;
     }
 
