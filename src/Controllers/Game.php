@@ -34,11 +34,6 @@ class Game {
     public function Scene(\LegendsGame\Response $Response, array $Binded = []): void {
         $permalien  = $Binded["permalien"] ?? null;
         $plytag     = $_SESSION["_ACCOUNT_"]->Player->lvltag ?? "0.0.0";
-
-
-        new \LegendsGame\Account;
-
-
         $Chapters   = $this->Game->Chapters;
         foreach ($Chapters as $chapter) {
             if ($chapter->permalien == $permalien) {

@@ -7,11 +7,6 @@ class Account {
 
     public function __construct() {
         $this->Database = new \LegendsGame\Database("default", true);
-
-
-        $this->ReloadPlayerAccount();
-
-        
     }
     
     /**
