@@ -22,9 +22,9 @@
     },
     {
         "method": "GET",
-        "pattern": "/game/",
+        "pattern": "/game/gamelist",
         "service": "Game::ListScene",
-        "auth": true
+        "auth": false
     },
     {
         "method": "GET",

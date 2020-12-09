@@ -726,6 +726,55 @@ hr.hr-style {
   margin-right: 0rem;
 }
 
+.bg-gl {
+  background-image: url("/assets/img/profile/wood-bg-profile.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: none;
+  height: 200px;
+}
+
+.card-title-gl, .card-text-gl {
+  color: white;
+}
+
+.card-title-gl {
+  font-weight: bold;
+}
+
+.decor-top-left-gl {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.decor-bot-right-gl {
+  position: absolute;
+  top: 140%;
+  left: 57%;
+}
+
+.btn-gl {
+  margin: 20px;
+  margin-top: 2px;
+  margin-bottom: 0px;
+  padding: 8px;
+}
+
+@media screen and (max-width: 1900px) {
+  .decor-bot-right-gl, .decor-top-left-gl {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 1045px) {
+  .height-div-gl {
+    height: 10rem;
+    visibility: hidden;
+  }
+}
 main.bg-parchment {
   background-image: url("/assets/img/navigation/header-background-small.png");
   background-size: 100% 100%;
@@ -857,6 +906,9 @@ main.bg-parchment {
 }
 .overlay.overlay-landscape {
   background-image: url("/assets/img/navigation/overlay/landscape.jpg");
+}
+.overlay.overlay-gamelist {
+  background-image: url("/assets/img/maps/main-maps.jpg");
 }
 .overlay .fadeout {
   width: 100%;

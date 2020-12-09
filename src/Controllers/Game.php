@@ -20,6 +20,7 @@ class Game {
     public function ListScene(\LegendsGame\Response $Response, array $Binded = []): void {
         $plytag     = $_ACCOUNT_->Player->lvltag ?? "0.0.0";
         $Chapters   = $this->Game->Chapters;
+        $Response -> load("game/gamelist");
         dd($Chapters);
         return;
     }
