@@ -7,6 +7,11 @@ class Account {
 
     public function __construct() {
         $this->Database = new \LegendsGame\Database("default", true);
+
+
+        $this->ReloadPlayerAccount();
+
+        
     }
     
     /**
@@ -31,7 +36,7 @@ class Account {
                         "identifier"    => $Player["uuid"],
                         "username"      => $Player["username"],
                         "email"         => $Player["email"],
-                        "lvltag"        => $Player["lvltag"],
+                        "lvltag"        => $Player["level"],
                         "stats"         => (object) [
                             "endurance"     => $Player["stats"]->endurance ?? 10,
                             "strength"      => $Player["stats"]->strength ?? 10,
@@ -63,7 +68,7 @@ class Account {
         $email      = htmlentities($email);
         $password   = hash("sha256", $password);
         if ($this->SearchAccount($username, $username, $email) === null) {
-            $response   = $this->Database->Request("INSERT INTO `players` (`uuid`, `email`, `username`, `password`, `character_name`, `skin`, `lvltag`, `inventory`, `created`) VALUES (:uuid, :email, :username, :password, null, null, null, null, :created);", [
+            $response   = $this->Database->Request("INSERT INTO `players` (`uuid`, `email`, `username`, `password`, `character_name`, `skin`, `level`, `inventory`, `created`) VALUES (:uuid, :email, :username, :password, null, null, null, null, :created);", [
                 "uuid"      => $this->CreateRandomString(64),
                 "email"     => $email,
                 "username"  => $username,
@@ -72,6 +77,39 @@ class Account {
             ]);
         }
         return (!empty($response) && !isset($response->errorInfo)? true: false);
+    }
+    
+    /**
+     * Reload and merge new player account datas
+     * @return void
+     */
+    public function ReloadPlayerAccount(): void {
+        $Account = $_SESSION["_ACCOUNT_"]->Player;
+        $Account = $this->Database->Request("SELECT * FROM `players` WHERE `uuid` = :uuid", [
+            "uuid" => $Account->identifier
+        ])->fetch();
+        if (!empty($Account)) {
+            $_SESSION["_ACCOUNT_"]  = (object) [
+                "Player"        => (object) [
+                    "identifier"    => $Account["uuid"],
+                    "username"      => $Account["username"],
+                    "email"         => $Account["email"],
+                    "lvltag"        => $Account["level"],
+                    "stats"         => (object) [
+                        "endurance"     => $Account["stats"]->endurance ?? 10,
+                        "strength"      => $Account["stats"]->strength ?? 10,
+                        "agility"       => $Account["stats"]->agility ?? 10,
+                        "intelligence"  => $Account["stats"]->intelligence ?? 10
+                    ],
+                    "character"     => (object) [
+                        "name"  => $Account["character_name"],
+                        "skin"  => (!empty($Account["skin"])? json_decode($Account["skin"], false): [])
+                    ]
+                ],
+                "Inventory"     => (!empty($Account["inventory"])? json_decode($Account["inventory"], false): [])
+            ];
+        }
+        return;
     }
     
     /**

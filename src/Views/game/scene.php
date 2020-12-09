@@ -26,7 +26,9 @@
 			<div class="header-text">
 				<h1><?= $_DATAS_["CHAPTER"] ?></h1>
 				<span><?= $_ACCOUNT_->Player->username ?><?= (!empty($_ACCOUNT_->Player->character->name)? " | Alias, {$_ACCOUNT_->Player->character->name}": null) ?></span>
-				<span>{{Classe}}</span>
+				<span>
+				<?= ($_ACCOUNT_->Player->character->name == "ELF"? "Elfe": ($_ACCOUNT_->Player->character->name == "DWARF"? "Nain": ($_ACCOUNT_->Player->character->name == "HUMAN"? "Humain": null))) ?>
+				</span>
 				<span>Lvl: <?= (!empty($_ACCOUNT_->Player->lvltag)? (string) $_ACCOUNT_->Player->lvltag: "0.0.0") ?></span>
 			</div>
 

@@ -40,6 +40,7 @@ class Game {
     public function ExecActions(string $actions): void {
         $actions = explode(";", $actions);
         foreach ($actions as $action) {
+            $action = trim($action);
             preg_match('/\[(.*)\]/', $action, $matches);
             $action     = (!empty($matches[1])? str_replace($matches[0], null, $action): $action);
             $action     = $this->Actions->{$action} ?? null;

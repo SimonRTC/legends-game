@@ -10,6 +10,7 @@
         "callable": "\\LegendsGame\\Actions\\Dices::RollDice"
     },
     "DEFINE_PLAYER_MODEL": {
+        "refresh": false,
         "parameters": [ "MODEL" ],
         "callable": "\\LegendsGame\\Actions\\Player::DefineModel"
     }
