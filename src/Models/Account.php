@@ -30,7 +30,7 @@ class Account {
         $Player = $response->fetch();
         if (!empty($Player)) {
             if ($Player["password"] == $password) {
-                $Player["stats"]         = (!empty($Player["stats"])? json_decode($Player["stats"], false): []);
+                $Player["stats"]        = (!empty($Player["stats"])? json_decode($Player["stats"], false): []);
                 $_SESSION["_ACCOUNT_"]  = (object) [
                     "Player"        => (object) [
                         "identifier"    => $Player["uuid"],
@@ -45,6 +45,7 @@ class Account {
                         ],
                         "character"     => (object) [
                             "name"  => $Player["character_name"],
+                            "class" => $Player["class"],
                             "skin"  => (!empty($Player["skin"])? json_decode($Player["skin"], false): [])
                         ]
                     ],
@@ -89,6 +90,7 @@ class Account {
             "uuid" => $Account->identifier
         ])->fetch();
         if (!empty($Account)) {
+            $Account["stats"]       = (!empty($Account["stats"])? json_decode($Account["stats"], false): []);
             $_SESSION["_ACCOUNT_"]  = (object) [
                 "Player"        => (object) [
                     "identifier"    => $Account["uuid"],
@@ -103,6 +105,7 @@ class Account {
                     ],
                     "character"     => (object) [
                         "name"  => $Account["character_name"],
+                        "class" => $Account["class"],
                         "skin"  => (!empty($Account["skin"])? json_decode($Account["skin"], false): [])
                     ]
                 ],
