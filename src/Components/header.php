@@ -31,6 +31,8 @@
                             <a class="btn btn-sm btn-outline-light" href="<?= (!empty($_SESSION["_ACCOUNT_"])? "/game/": "/connexion/") ?>">Jouer maintenant</a>
                             <?php if (empty($_SESSION["_ACCOUNT_"])): ?>
                                 <a class="btn btn-sm btn-outline-success ml-3" href="/inscription/">Inscription</a>
+                            <?php else: ?>
+                                <a class="btn btn-sm btn-outline-danger ml-3" href="/deconnexion/">Déconnexion de <?= $_SESSION["_ACCOUNT_"]->Player->username ?></a>
                             <?php endif; ?>
                         </div>
                     </div>
