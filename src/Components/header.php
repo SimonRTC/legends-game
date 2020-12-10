@@ -28,7 +28,7 @@
                             </li>
                         </ul>
                         <div class="form-inline my-2 my-lg-0">
-                            <a class="btn btn-sm btn-outline-light" href="/maps/">Jouer maintenant</a>
+                            <a class="btn btn-sm btn-outline-light" href="<?= (!empty($_SESSION["_ACCOUNT_"])? "/game/": "/connexion/") ?>">Jouer maintenant</a>
                         </div>
                     </div>
                 </nav>
