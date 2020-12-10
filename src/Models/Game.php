@@ -25,8 +25,10 @@ class Game {
      * @return array
      */
     public function GetCharacters(array $characters): array {
-        foreach ($characters as &$character) {
-            $character = (object) array_merge((array) $character, (isset($this->Characters->{$character->identifier}) && !empty($this->Characters->{$character->identifier})? (array) $this->Characters->{$character->identifier}: []));
+        if (!empty($characters)) {
+            foreach ($characters as &$character) {
+                $character = (object) array_merge((array) $character, (isset($this->Characters->{$character->identifier}) && !empty($this->Characters->{$character->identifier})? (array) $this->Characters->{$character->identifier}: []));
+            }
         }
         return $characters;
     }
