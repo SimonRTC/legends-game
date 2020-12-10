@@ -24,7 +24,7 @@
         "method": "GET",
         "pattern": "/game/gamelist",
         "service": "Game::ListScene",
-        "auth": false
+        "auth": true
     },
     {
         "method": "GET",

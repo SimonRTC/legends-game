@@ -35,7 +35,7 @@
                             <h4 class="card-title">
                                 <a href="#">Haume de guerrier doré</a>
                             </h4>
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="/assets/img/shop/coming-soon.png" alt=""></a>
                             <div class="card-body">
                                 <h5><div class="coin-deco"></div>100g</h5> 
                             </div>
@@ -46,7 +46,7 @@
                             <h4 class="card-title">
                                 <a href="#">Plastron de guerrier doré</a>
                             </h4>
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="/assets/img/shop/coming-soon.png" alt=""></a>
                             <div class="card-body">
                                 <h5><div class="coin-deco"></div>100g</h5>
                             </div>
@@ -57,7 +57,7 @@
                             <h4 class="card-title">
                                 <a href="#">Epée de guerrier dorée</a>
                             </h4>
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="/assets/img/shop/coming-soon.png" alt=""></a>
                             <div class="card-body">
                                 <h5><div class="coin-deco"></div>100g</h5>
                             </div>
@@ -68,7 +68,7 @@
                             <h4 class="card-title">
                                 <a href="#">Tiare de mage rouge</a>
                             </h4>
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="/assets/img/shop/coming-soon.png" alt=""></a>
                             <div class="card-body">
                                 <h5><div class="coin-deco"></div>100g</h5> 
                             </div>
@@ -79,7 +79,7 @@
                             <h4 class="card-title">
                                 <a href="#">Robe de mage rouge</a>
                             </h4>
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="/assets/img/shop/coming-soon.png" alt=""></a>
                             <div class="card-body">
                                 <h5><div class="coin-deco"></div>100g</h5>
                             </div>
@@ -90,7 +90,7 @@
                             <h4 class="card-title">
                                 <a href="#">Bâton épique rouge</a>
                             </h4>
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="/assets/img/shop/coming-soon.png" alt=""></a>
                             <div class="card-body">
                                 <h5><div class="coin-deco"></div>100g</h5>
                             </div>
@@ -101,7 +101,7 @@
                             <h4 class="card-title">
                                 <a href="#">Protège-tête d'archer vert</a>
                             </h4>
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="/assets/img/shop/coming-soon.png" alt=""></a>
                             <div class="card-body">
                                 <h5><div class="coin-deco"></div>100g</h5> 
                             </div>
@@ -112,7 +112,7 @@
                             <h4 class="card-title">
                                 <a href="#">Tunique d'archer vert</a>
                             </h4>
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="/assets/img/shop/coming-soon.png" alt=""></a>
                             <div class="card-body">
                                 <h5><div class="coin-deco"></div>100g</h5>
                             </div>
@@ -123,7 +123,7 @@
                             <h4 class="card-title">
                                 <a href="#">Arc d'archer vert</a>
                             </h4>
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="/assets/img/shop/coming-soon.png" alt=""></a>
                             <div class="card-body">
                                 <h5><div class="coin-deco"></div>100g</h5>
                             </div>

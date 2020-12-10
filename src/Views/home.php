@@ -157,7 +157,7 @@
                 <div class="decor-presentation">
                     <img src="/assets/img/home/wood-bar-3" alt="">
                     <img class="rounded-circle image-decoration" src="/assets/img/characters/class/archer.png" alt="archer image" width="140" height="140">
-                    <h2>Guerrier</h2>
+                    <h2>Archer</h2>
                 </div>
                 <div class="btn-parchment d-flex justify-content-center popup" role="button" onclick="showText6()"> Voir
                     <span class="popuptext" id="myPopup6">
