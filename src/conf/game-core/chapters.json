@@ -17,11 +17,11 @@
                 "responses": [
                     {
                         "label": "Vous acceptez l’aide du vieillard, c’est sympa !",
-                        "actions": "GO_TO_QUESTION[0.2.2]"
+                        "actions": "GO_TO_QUESTION[0.1.0]"
                     },
                     {
                         "label": "Vous vous méfiez, et essayez de relever tout seul…",
-                        "actions": "DICE_ROLL[AGILITY, 0.2.2, 0.2.1]"
+                        "actions": "DICE_ROLL[AGILITY 0.2.2, 0.2.1]"
                     }
                 ]
             },
@@ -37,15 +37,327 @@
                 "responses": [
                     {
                         "label": "Je suis une Elfe des forets de Mist Island, au Nord de Kappa !",
-                        "actions": "DEFINE_PLAYER_MODEL[ELF]"
+                        "actions": "DEFINE_PLAYER_MODEL[ELF]; GO_TO_QUESTION[0.3.0]"
                     },
                     {
                         "label": "Je suis un brave Nain venant des Caucausius Montains, au Nord-Ouest de Kappa !",
-                        "actions": "DEFINE_PLAYER_MODEL[DWARF]"
+                        "actions": "DEFINE_PLAYER_MODEL[DWARF]; GO_TO_QUESTION[0.3.0]"
                     },
                     {
                         "label": "Euh, Je suis un humain, j’habite ici, à Bilgewater",
-                        "actions": "DEFINE_PLAYER_MODEL[HUMAN]"
+                        "actions": "DEFINE_PLAYER_MODEL[HUMAN]; GO_TO_QUESTION[0.3.0]"
+                    }
+                ]
+            },
+            {
+                "tag": "0.2.2",
+                "narration": "Super, vous êtes enfin sur vos deux guibolles, un liquide acide vous remonte la gorge mais tout reste heureusement sous contrôle. Vous prenez le temps de donner quelques coups à vos vêtements pour essayer de vous rendre présentable, le vieil s’obstine à vous faire la conversation…",
+                "characters": [
+                    {
+                        "identifier": "THE-OLD-MAN-FROM-THE-START",
+                        "dialogue": "Excusez ma curiosité mais ma vue n’est plus ce qu’elle était… Mais je sens bien que vous êtes un aventurier ! D’où venez-vous ?"
+                    }
+                ],
+                "responses": [
+                    {
+                        "label": "Je suis une Elfe des forets de Mist Island, au Nord de Kappa !",
+                        "actions": "DEFINE_PLAYER_MODEL[ELF]; GO_TO_QUESTION[0.3.0]"
+                    },
+                    {
+                        "label": "Je suis un brave Nain venant des Caucausius Montains, au Nord-Ouest de Kappa !",
+                        "actions": "DEFINE_PLAYER_MODEL[DWARF]; GO_TO_QUESTION[0.3.0]"
+                    },
+                    {
+                        "label": "Euh, Je suis un humain, j’habite ici, à Bilgewater",
+                        "actions": "DEFINE_PLAYER_MODEL[HUMAN]; GO_TO_QUESTION[0.3.0]"
+                    }
+                ]
+            },
+            {
+                "tag": "0.1.0",
+                "narration": "Vous êtes étonné par la force de ce vieil homme, comme quoi on peut avoir l’air d’avoir vécu 100 ans et être bien conservé ! Vous vous tenez enfin droit sur vos jambes, mais couvert de boue…C’est certain, vous vous jurer de ne plus jamais boire comme cela !",
+                "characters": [
+                    {
+                        "identifier": "THE-OLD-MAN-FROM-THE-START",
+                        "dialogue": "Excusez ma curiosité mais ma vue n’est plus ce qu’elle était… Mais je sens bien que vous êtes un aventurier ! D’où venez-vous ?"
+                    }
+                ],
+                "responses": [
+                    {
+                        "label": "Je suis une Elfe des forets de Mist Island, au Nord de Kappa !",
+                        "actions": "DEFINE_PLAYER_MODEL[ELF]; GO_TO_QUESTION[0.3.0]"
+                    },
+                    {
+                        "label": "Je suis un brave Nain venant des Caucausius Montains, au Nord-Ouest de Kappa !",
+                        "actions": "DEFINE_PLAYER_MODEL[DWARF]; GO_TO_QUESTION[0.3.0]"
+                    },
+                    {
+                        "label": "Euh, Je suis un humain, j’habite ici, à Bilgewater",
+                        "actions": "DEFINE_PLAYER_MODEL[HUMAN]; GO_TO_QUESTION[0.3.0]"
+                    }
+                ]
+            },
+            {
+                "tag": "0.3.0",
+                "narration": "Un des sourcils du vieil homme se soulève, vous l’observez se gratter la barbe d’un air penseur, tentant bien que mal d’avoir l’air d’aller très bien, vous remarquer que votre arme n’est ni sur vous ni autour de vous ! Vous l’aurait-on volé pendant votre sommeil ?! Vous êtes interrompu dans vos pensées :",
+                "characters": [
+                    {
+                        "identifier": "THE-OLD-MAN-FROM-THE-START",
+                        "dialogue": "D’ailleurs aventurier, j’ai retrouvé trois armes sur mon chemin, l’une d’elle serait-elle la vôtre ?"
+                    }
+                ],
+                "responses": [
+                    {
+                        "label": "Prendre l’épée, vous êtes un grand guerrier bien bourrin, la castagne c’est votre petit dej !",
+                        "actions": "DEFINE_PLAYER_CLASS[WAR]; GO_TO_QUESTION[0.4.0]"
+                    },
+                    {
+                        "label": "Prendre le bâton, Vous êtes un expert au lancer de boule de feu, le futur meilleur mage de tous les temps !",
+                        "actions": "DEFINE_PLAYER_CLASS[MAGE]; GO_TO_QUESTION[0.4.0]"
+                    },
+                    {
+                        "label": "Prendre l’arc, votre œil aiguisé touche toutes ses cibles, vous êtes un archer prometteur !",
+                        "actions": "DEFINE_PLAYER_CLASS[ARCHER]; GO_TO_QUESTION[0.4.0]"
+                    }
+                ]
+            },
+            {
+                "tag": "0.4.0",
+                "narration": "Vous voici enfin prêt pour une nouvelle journée d’aventure, arme en main, vous vous dites qu’un bon petit déjeuner vous aiderait à vous remettre de cette cuite… C’est à ce moment précis que les portes de l’auberge s’ouvrent, le bruit vous attire...Votre reflexe et de regarder derriere vous une seconde, et lorsque vous avez fini, la rue est désormais déserte…Le vieil homme a disparu sans un bruit en une fraction de seconde ! En attendant de résoudre ce mystère, autant se préparer à vivre d’autres aventures…Une voix résonne au loin.",
+                "characters": [
+                    {
+                        "identifier": "THE-OLD-MAN-FROM-THE-START",
+                        "dialogue": "Nous nous reverrons bientôt, aventurier, c’est certain… "
+                    }
+                ],
+                "responses": [
+                    {
+                        "label": "Entrer dans l’Auberge et commencez à vivre votre aventure !",
+                        "actions": "NEXT_CHAPTER[1.0.0]"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Tracas à BigleWater",
+        "tag": "1.0.0",
+        "permalien": "premiers-pas",
+        "questions": [
+            {
+                "tag": "1.0.0",
+                "narration": "Ca fait un moment que vous déjeunez dans cette taverne, il faut dire que cette soirée arrosée vous à grandement ouvert l'appétit ce matin. En mordant dans votre morceau de pain, vous entendez de l'agitation dehors, c'est vrai que le maire de Biglewater doit faire un discours ce matin concernant les attaques de gobelins qui deviennent beaucoup trop nombreuse autour de la ville...La grande place aux discours est juste à coté.",
+                "actions": null,
+                "characters": [],
+                "responses": [
+                    {
+                        "label": "Rester finir de manger...Pas que ça à faire !",
+                        "actions": "GO_TO_QUESTION[1.1.0]"
+                    },
+                    {
+                        "label": "Sortir jeter un oeil à tout ça.",
+                        "actions": "GO_TO_QUESTION[1.2.0]"
+                    }
+                ]
+            },
+            {
+                "tag": "1.1.0",
+                "narration": "Vous restez seul sur votre chaise en bois, tandis que dehors vous sentez l'agitation grandir. Vous savourez ce petit moment de solitude mais pas pour longtemps car vous manquez de vous étouffer avec le dernier morceau de pain lorsque vous entendez une explosion et des cris s'inviter au rassemblement dehors ! Ah pas de répis pour un aventurier comme vous, vous vous préparez au pire en ramassant vos affaire et en sortant.",
+                "characters": [],
+                "responses": [
+                    {
+                        "label": "Sortir d'un pas décidé voir ce qu'il se passe.",
+                        "actions": "GO_TO_QUESTION[1.3.0]"
+                    }
+                ]
+            },
+            {
+                "tag": "1.2.0",
+                "narration": "Vos affaires réunis, vous sortez et observez la place de la ville, un murmure parcourt la foule au moment où le Maire apparaît. L’un de ses hommes dispose une caisse debois devant lui afin qu’il puisse monter dessus pour être vu de tous. Il lui suffit de lever la main pour faire le silence. – Peuple de Biglewater, commence-t-il, aujourd’hui est un jour glorieux. J’ai en effet reçu une lettre de la capital de Kappa ! Le roi nous envoit hommes et vivres pour renforcer notre grande cité ! À ces simples mots, la foule exulte de joie ! Le Maire brandit haut le pain et le vin tandis que la foule crie à s’en briser la voix. Soudain retentit une violente explosion et la bouteille éclate en morceaux, la panique s’abat alors sur la foule.",
+                "characters": [],
+                "responses": [
+                    {
+                        "label": "S'abriter derrière un panneau en bois pour réfléchir à la situation.",
+                        "actions": "GO_TO_QUESTION[1.3.0]"
+                    },
+                    {
+                        "label": "Courir vers le pont de l'autre coté, la d'où venait la détonation.",
+                        "actions": "GO_TO_QUESTION[1.4.0]"
+                    }
+                ]
+            },
+            {
+                "tag": "1.3.0",
+                "narration": "Adossé et à l'abris, vous prenez un instant parmis la panique générale pour analyser la situation, vous entendez les gens hurler que quelque chose a tiré sur le Maire en vaint. Vous voyez ce dernier, recouvert de vin, se faire escorter par ses hommes en sécurité. Tout le monde semble désigner la direction du pont comme source de tous les troubles. Ce n'est pas étonnant de l'autre coté se trouve un quartier en ruine et à l'abondon...",
+                "characters": [],
+                "responses": [
+                    {
+                        "label": "Prendre cette direction ! Au menu ce midi, brochette de malfrat !",
+                        "actions": "GO_TO_QUESTION[1.4.0]"
+                    }
+                ]
+            },
+            {
+                "tag": "1.4.0",
+                "narration": "Arme en main, vous arrivez sur le pont, vous voyez s'enfuir 3 petits gobelin hideux. Ils sont vêtus de guenilles souillées et armés de gourdins. L'un d'eux trébuche et vous arrivez à le rattraper, Il se redresse très vite et vous voyez la haine briller dans son regard. Il veut en découdre avec vous ! C'est le moment de faire le ménage dans cette partie de la ville et d'éliminer cette vermine !",
+                "characters": [],
+                "responses": [
+                    {
+                        "label": "Attaquer !",
+                        "actions": "GO_TO_QUESTION[1.5.0]; GIVE_XP_TO_PLAYER[15.0]"
+                    },
+                    {
+                        "label": "Tout compte fait...Rebrousser chemin...",
+                        "actions": "GO_TO_QUESTION[1.6.0]"
+                    }
+                ]
+            },
+            {
+                "tag": "1.5.0",
+                "narration": "Et bim, la créature s'évanouit sous la puissance de votre toute première attaque ! Il n'était pas de taille, c'était surement le plus petit et faible de ces jeunes gobelins ! Tant qu'ils n'ont pas atteint la taille adulte, ces monstres restent très facile à battre...Vous l'attachez et vous n'avez pas le temps de savourer cette victoire, que d'autre hurlements retentissent de la place que vous venez de quitter...",
+                "characters": [],
+                "responses": [
+                    {
+                        "label": "Retournez sur vos pas...",
+                        "actions": "GO_TO_QUESTION[1.6.0]"
+                    },
+                    {
+                        "label": "Il reste ces 2 autres gobelins à chasser ! Pas question de perdre leur trace maintenant !",
+                        "actions": "GO_TO_QUESTION[1.7.0]; GIVE_XP_TO_PLAYER[15.0]"
+                    }
+                ]
+            },
+            {
+                "tag": "1.6.0",
+                "narration": "Cette journée est décidemment sans repos !  Des cris proviennent en fait des portes de la ville. Craignant  une  nouvelle  attaque, plusieurs habitants s’emparent d'armes diverses avant de se précipiter vers la muraille. Vous les suivez, si de plus gros gobelins attaquent ça pourrait s'averer très dangereux pour la ville. Vos craintes sont toutefois vite dissipées. Il ne s’agit que le retour d'une troupe d'aventurier qui était partie il y a plusieurs jours sécuriser la forêt. Parmis eux se trouvent des humains en haillons sentant la peur et la sueur à des kilomètres...",
+                "characters": [],
+                "responses": [
+                    {
+                        "label": "Vous rapprocher et observer.",
+                        "actions": "GO_TO_QUESTION[1.11.0]"
+                    }
+                ]
+            },
+            {
+                "tag": "1.7.0",
+                "narration": "C'est un quartier lugubre et en ruine abandonné depuis des dizaines d'années qui se dresse devant vous, vous entendez de l'agitation venant de la grande place, mais de petits bruits supects vous intrigue. Il proviennent de la seule maison encore debout sur votre droite...",
+                "characters": [],
+                "responses": [
+                    {
+                        "label": "1.8.0 Entrer à vos risques et périls..",
+                        "actions": "GO_TO_QUESTION[1.8.0]; GIVE_XP_TO_PLAYER[15.0]"
+                    },
+                    {
+                        "label": "1.6.0 Rebrousser chemin, et si on avait besoin de vous derrière ?",
+                        "actions": "GO_TO_QUESTION[1.6.0]"
+                    }
+                ]
+            },
+            {
+                "tag": "1.8.0",
+                "narration": "Vous ouvrez la porte et entrez, la poussière vous prends à la gorge et l'obscurité vous empêche de dicerner correctement l'endroit. Le calme imposant vous parait suspect et vous faites quelques pas...Soudain vous entendez un cri horrible et une ombre semble se diriger vers vous ! Il est cruciale de réagir vite !",
+                "characters": [],
+                "responses": [
+                    {
+                        "label": "Ahh ! Attaquer l'ombre !.",
+                        "actions": "GO_TO_QUESTION[1.9.0]"
+                    },
+                    {
+                        "label": "Tenter d'esquiver...",
+                        "actions": "GO_TO_QUESTION[1.9.1]"
+                    }
+                ]
+            },
+            {
+                "tag": "1.9.0",
+                "narration": "L'ombre se prends de plein fouet votre attaque et vous entendez l'équivalent d'un cri humain et semble s'étaler sur le sol lourdement...Maintenant que vos yeux se sont habitués vous observez que vous venez d'assomer un être humain...On dirait qu'il est juste évanoui, ouf. Quel dommage d'avoir confondu cet homme avec l'un des petits gobelins pourchassé. Il va falloir le ramener en ville pour être soigné l'endroit n'est certainement pas sur...",
+                "characters": [],
+                "responses": [
+                    {
+                        "label": "Porter l'homme jusqu'à la place.",
+                        "actions": "DEFINE_PLAYER_MODEL[WAR]; GO_TO_QUESTION[1.10.0]"
+                    },
+                    {
+                        "label": "Oopsie ! Faire demi tour ni vu ni connu...*sifflote*",
+                        "actions": "GO_TO_QUESTION[1.6.0]"
+                    }
+                ]
+            },
+            {
+                "tag": "1.9.1",
+                "narration": "Vous esquivez d'un pas sur la gauche et l'ombre s'écrase contre la porte juste derrière lachant un juron de douleur qui n'avait rien de gobelin ! Maintenant que vos yeux s'habituent à l'obscurité vous remarquer que c'est un homme qui vous a foncer dessus. Après un moment de silence gênant, l'homme s'escuse, il explique qu'il a cru qu'un des gobelins, qu'il avait vu s'enfuir dans un tunnel non loin, avait rebrousser chemin et tenté de rentrer dans ce qui lui sert de demeure...On dirait bien que les gobelins sont déjà loin.",
+                "characters": [],
+                "responses": [
+                    {
+                        "label": "Accepter les escuses et rebrousser chemin sans tarder...",
+                        "actions": "GO_TO_QUESTION[1.6.0]"
+                    },
+                    {
+                        "label": "Accepter les escuses et demander pourquoi vit-il là ?",
+                        "actions": "GO_TO_QUESTION[1.9.2]; GIVE_XP_TO_PLAYER[15.0]"
+                    }
+                ]
+            },
+            {
+                "tag": "1.9.2",
+                "narration": "Il vous explique que ce quartier était l'un des plus beau avant et que ses biens s'y trouvaient, après plusieurs attaques de gobelins par la Sud, les gens avaient fini par abandonner cette partie trop exposée et facile d'accès au profit d'un endroit plus sécurisé vers le centre. Il tient à defendre jusqu'a son dernier jour la maison où sa femme est morte et où ses enfants avaient grandit. Pour vous remercier d'avoir prit le temps de discuter avec lui et s'escuser encore, il vous tends un objet...",
+                "characters": [],
+                "responses": [
+                    {
+                        "label": "Prendre l'objet (une amulette) et repartir, l'agitation est toujours perceptible derrière.",
+                        "actions": "GO_TO_QUESTION[1.6.0]; GIVE_XP_TO_PLAYER[15.0]"
+                    },
+                    {
+                        "label": "Refuser et repartir, vous devez vous depêcher de repartir.",
+                        "actions": "GO_TO_QUESTION[1.6.0]"
+                    }
+                ]
+            },
+            {
+                "tag": "1.10.0",
+                "narration": "Vous arrivez de l'autre coté du pont sans encombre...Vous déposez l'homme sur le banc de plus proche et parmis l'agitation générale, vous arrivez à accoster une jeune femme qui semble pouvoir alerter et ramener un soigneur. On espère que l'homme se remettra vite de votre bourde...Temps pis pour les petits gobelins restants, ils doivent être loin dans un de leur tunnel à l'heure qu'il est....",
+                "characters": [],
+                "responses": [
+                    {
+                        "label": "Se diriger vers l'agitation.",
+                        "actions": "GO_TO_QUESTION[1.6.0]"
+                    }
+                ]
+            },
+            {
+                "tag": "1.11.0",
+                "narration": "C'est une femme en armure étincelante rouge qui s'exclame : -Peuple de Bigglewater, nous ramenons de notre quête, ceux qui se trouvaient prisonnier d'un avant poste gobelin à quelques kilomètre dans la forêt, nous avons réussir à détruire beaucoup de ces monstres mais d'autres se sont repliés au Fort Perdu de l'autre coté de la forêt... En un instant le peuple semble se calmer et se met à acclamer la troupe ! Certains prennent en charge les blessés et les humains apeurés, puis la femme reprends la parole : - Nous devons nous rendre à ce Fort et reprendre son contrôle si nous voulons être en sécurité dans NOTRE ville ! Nous partons demain matin et il nous faut remplacer les blessés, si vous êtes un combattant aguérie vous serez le bienvenue !.",
+                "characters": [],
+                "responses": [
+                    {
+                        "label": "Vous porter volontaire ! Une aventure c'est tout ce qu'il vous fallait !.",
+                        "actions": "GO_TO_QUESTION[1.12.0]"
+                    },
+                    {
+                        "label": "Croiser les bras et réflechir....",
+                        "actions": "GO_TO_QUESTION[1.13.0]"
+                    }
+                ]
+            },
+            {
+                "tag": "1.12.0",
+                "narration": "La femme humaine marche droit vers vous alors que vous avez le bras tendu, c'est une femme très très grande les cheveux noirs tirés en chignon vers l'arrière sous son casque, en vous dévisageant elle dit :- Vous, on dirait que vous n'avez pas beaucoup d'expérience mais je vois du potentiel en vous, et nous avons besoin de soldat. C'est d'accord vous venez, nous partons à l'aube, soyez à l'heure... Vous lui répondez que vous n'avez jamais déçu personne jusqu'à présent et que vous serez à l'heure pour le grand départ ! Sur votre phrase, la femme prit congé en silence l'expression figée et sérieuse, dans la foule. On dirait bien qu'une nouvelle aventure vous attends. Vous repartez à l'auberge pour vous préparer...En espérant être à l'heure demain matin...Fin du chapitre 1..",
+                "characters": [],
+                "responses": [
+                    {
+                        "label": "Continuer l'aventure...",
+                        "actions": "NEXT_CHAPTER[2.0.0]"
+                    }
+                ]
+            },
+            {
+                "tag": "1.13.0",
+                "narration": "La femme humaine marche droit vers vous, c'est une femme très grande les cheveux noirs tirés en chignon vers l'arrière, en vous dévisageant elle dit :- Vous, votre arme, votre allure vous êtes un aventurier ! On dirait que vous n'avez pas beaucoup d'expérience mais je vois du potentiel en vous, et nous avons besoin de soldat. Qu'en dites-vous ? C'est de votre devoir de garder cette endroit en sécurité, vous hochez la tête et en répondant que la troupe pourra compter sur vous ! -  Nous partons à l'aube, soyez à l'heure. C'est sur cette phrase qu'elle prit congé, l'expression figée et sérieuse, disparaissant dans la foule. On dirait bien qu'une nouvelle aventure vous attends. Vous repartez à l'auberge pour vous préparer...En espérant être à l'heure demain matin...Fin du chapitre 1.",
+                "characters": [],
+                "responses": [
+                    {
+                        "label": "Continuer l'aventure...",
+                        "actions": "NEXT_CHAPTER[2.0.0]"
                     }
                 ]
             }
