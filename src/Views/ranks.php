@@ -22,7 +22,7 @@
                                     <div class="card-body">
                                         <h6 class="card-title">#<?= $i + 1 ?> <?= $Player->username ?> [<?= $Player->experience ?>XP]</h6>
                                         <p class="card-text">
-                                            Peuple: <strong><?= ($Player->character->name == "ELF"? "Elfe": ($Player->character->name == "DWARF"? "Nain": ($Player->character->name == "HUMAN"? "Humain": null))) ?></strong>,
+                                            Peuple: <strong><?= ($Player->character->name == "ELF"? "Elfe": ($Player->character->name == "DWARF"? "Nain": ($Player->character->name == "HUMAN"? "Humain": null))) ?></strong>,<br />
                                             Classe: <strong><?= ($Player->character->class == "WAR"? "Guerrier": ($Player->character->class == "MAGE"? "Mage": ($Player->character->class == "ARCHER"? "Archer": null))) ?></strong>    
                                         </p>
                                         <a href="/profils/<?= $Player->username ?>/" class="btn btn-parchment btn-center">Voir</a>
@@ -50,7 +50,7 @@
                                         <div class="card-body">
                                             <h6 class="card-title">#<?= $i + 1 ?> <?= $Player->username ?> [<?= $Player->experience ?>XP]</h6>
                                             <p class="card-text">
-                                                Peuple: <strong><?= ($Player->character->name == "ELF"? "Elfe": ($Player->character->name == "DWARF"? "Nain": ($Player->character->name == "HUMAN"? "Humain": null))) ?></strong>,
+                                                Peuple: <strong><?= ($Player->character->name == "ELF"? "Elfe": ($Player->character->name == "DWARF"? "Nain": ($Player->character->name == "HUMAN"? "Humain": null))) ?></strong>,<br />
                                                 Classe: <strong><?= ($Player->character->class == "WAR"? "Guerrier": ($Player->character->class == "MAGE"? "Mage": ($Player->character->class == "ARCHER"? "Archer": null))) ?></strong>    
                                             </p>
                                             <a href="/profils/<?= $Player->username ?>/" class="btn btn-parchment btn-center">Voir</a>
