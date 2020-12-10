@@ -48,7 +48,10 @@
                                     <div class="divider"></div>
                                     <div class="card-body">
                                         <h6 class="card-title">#<?= $i + 1 ?> <?= $Player->username ?></h6>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p class="card-text">
+                                            Peuple: <strong><?= ($Player->character->name == "ELF"? "Elfe": ($Player->character->name == "DWARF"? "Nain": ($Player->character->name == "HUMAN"? "Humain": null))) ?></strong>,
+                                            Classe: <strong><?= ($Player->character->class == "WAR"? "Guerrier": ($Player->character->class == "MAGE"? "Mage": ($Player->character->class == "ARCHER"? "Archer": null))) ?></strong>    
+                                        </p>
                                         <a href="/profils/<?= $Player->username ?>/" class="btn btn-parchment btn-center">Voir</a>
                                     </div>
                                 </div>
