@@ -23,5 +23,10 @@
         "refresh": false,
         "parameters": [ "CLASS" ],
         "callable": "\\LegendsGame\\Actions\\Player::DefineClass"
+    },
+    "GIVE_XP_TO_PLAYER": {
+        "refresh": false,
+        "parameters": [ "AMOUNT" ],
+        "callable": "\\LegendsGame\\Actions\\Player::GiveXpToPlayer"
     }
 }

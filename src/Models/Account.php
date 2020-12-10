@@ -32,6 +32,7 @@ class Account {
                         "username"      => $Player["username"],
                         "email"         => $Player["email"],
                         "lvltag"        => $Player["level"],
+                        "experience"    => (float) $Player["experience"],
                         "stats"         => (object) [
                             "endurance"     => $Player["stats"]->endurance ?? 10,
                             "strength"      => $Player["stats"]->strength ?? 10,
@@ -92,6 +93,7 @@ class Account {
                     "username"      => $Account["username"],
                     "email"         => $Account["email"],
                     "lvltag"        => $Account["level"],
+                    "experience"    => (float) $Account["experience"],
                     "stats"         => (object) [
                         "endurance"     => $Account["stats"]->endurance ?? 10,
                         "strength"      => $Account["stats"]->strength ?? 10,

@@ -87,7 +87,7 @@ class Game {
                 }
             }
         }
-        die("END!");
+        die("Action(s) executed.");
         return;
     }
 

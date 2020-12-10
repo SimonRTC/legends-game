@@ -3,7 +3,23 @@
 namespace LegendsGame\Actions;
 
 class Player extends \LegendsGame\Game {
-    
+        
+    /**
+     * Give XP to player
+     *
+     * @param  array $parameters
+     * @return void
+     */
+    public function GiveXpToPlayer(array $parameters) {
+        $amount     = (float) $parameters[0] ?? null;
+        $amount     += $_SESSION["_ACCOUNT_"]->Player->experience ?? 0.0;
+        $this->Database->Request("UPDATE `players` SET experienceZZZ = :experience WHERE uuid = :uuid", [
+            "uuid"          => $_SESSION["_ACCOUNT_"]->Player->identifier,
+            "experience"    => $amount
+        ]);
+        return;
+    }
+
     /**
      * Define player model
      *
