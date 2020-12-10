@@ -48,10 +48,10 @@ class Account {
     public function SignUp(\LegendsGame\Response $Response, array $Binded = [], ?object $_ACCOUNT_): void {
         if (empty($_ACCOUNT_)) {
             if (!empty($_POST)) {
-                $username   = (!empty($_POST["username"])? $_POST["username"]: null);
-                $email      = (!empty($_POST["email"])? $_POST["email"]: null);
-                $password   = (!empty($_POST["password"])? $_POST["password"]: null);
-                if (!empty($username) && !empty($password)) {
+                $username   = $_POST["username"] ?? null;
+                $email      = $_POST["email"] ?? null;
+                $password   = $_POST["password"] ?? null;
+                if (!empty($username) && !empty($email) && !empty($password)) {
                     $cb = $this->Account->SignUp($username, $email, $password);
                     if (!$cb) {
                         $Response->SetNotification("SIGN-UP_FAILURE");

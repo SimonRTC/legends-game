@@ -65,11 +65,12 @@ class Account {
         $email      = htmlentities($email);
         $password   = hash("sha256", $password);
         if ($this->SearchAccount($username, $username, $email) === null) {
-            $response   = $this->Database->Request("INSERT INTO `players` (`uuid`, `email`, `username`, `password`, `character_name`, `skin`, `level`, `inventory`, `created`) VALUES (:uuid, :email, :username, :password, null, null, null, null, :created);", [
+            $response   = $this->Database->Request("INSERT INTO `players` (`uuid`, `email`, `username`, `password`, `character_name`, `class`, `skin`, `experience`, `level`, `stats`, `inventory`, `created`) VALUES (:uuid, :email, :username, :password, null, null, null, 0, :level, null, null, :created);", [
                 "uuid"      => $this->CreateRandomString(64),
                 "email"     => $email,
                 "username"  => $username,
                 "password"  => $password,
+                "level"     => "0.0.0",
                 "created"   => date(__DATE_FORMAT__),
             ]);
         }
