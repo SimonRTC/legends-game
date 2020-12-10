@@ -13,7 +13,7 @@ class Player extends \LegendsGame\Game {
     public function GiveXpToPlayer(array $parameters) {
         $amount     = (float) $parameters[0] ?? null;
         $amount     += $_SESSION["_ACCOUNT_"]->Player->experience ?? 0.0;
-        $this->Database->Request("UPDATE `players` SET experienceZZZ = :experience WHERE uuid = :uuid", [
+        $this->Database->Request("UPDATE `players` SET experience = :experience WHERE uuid = :uuid", [
             "uuid"          => $_SESSION["_ACCOUNT_"]->Player->identifier,
             "experience"    => $amount
         ]);
