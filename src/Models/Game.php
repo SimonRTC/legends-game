@@ -64,18 +64,20 @@ class Game {
      * @return array
      */
     public function GetAllPlayersRanked(): array {
-        $Players = $this->Database->Request("SELECT `username`, `character_name`, `class`, `experience`, `level` FROM `players` ORDER BY `experience`")->fetchAll();
-        foreach ($Players as &$Player) {
+        $Players = $this->Database->Request("SELECT `username`, `character_name`, `class`, `experience`, `level` FROM `players` ORDER BY `experience` DESC")->fetchAll();
+        foreach ($Players as $i => &$Player) {
             if (!empty($Player["character_name"]) && !empty($Player["class"])) {
                 $Player = (object) [
                     "username"      => $Player["username"],
                     "experience"    => (float) $Player["experience"],
-                    "character"     => [
+                    "character"     => (object) [
                         "name"          => $Player["character_name"],
                         "class"         => $Player["class"]
                     ],
                     "level"         => $Player["level"]
                 ];
+            } else {
+                unset($Players[$i]);
             }
         }
         return $Players;
