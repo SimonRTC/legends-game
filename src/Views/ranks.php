@@ -41,22 +41,24 @@
             <div class="row justify-content-center">
                 <?php foreach ($_DATAS_["PLAYERS"] as $i => $Player): ?>
                     <?php if ($i > 2): ?>
-                        <div class="col-xl-3 col-lg-4 col-md-7 card-rank">
-                            <fieldset class="wood">
-                                <div class="card truc bg_next">
-                                    <img class="card-img-top" src="/assets/img/ranks/person-male.png" alt="No one">
-                                    <div class="divider"></div>
-                                    <div class="card-body">
-                                        <h6 class="card-title">#<?= $i + 1 ?> <?= $Player->username ?> [<?= $Player->experience ?>XP]</h6>
-                                        <p class="card-text">
-                                            Peuple: <strong><?= ($Player->character->name == "ELF"? "Elfe": ($Player->character->name == "DWARF"? "Nain": ($Player->character->name == "HUMAN"? "Humain": null))) ?></strong>,
-                                            Classe: <strong><?= ($Player->character->class == "WAR"? "Guerrier": ($Player->character->class == "MAGE"? "Mage": ($Player->character->class == "ARCHER"? "Archer": null))) ?></strong>    
-                                        </p>
-                                        <a href="/profils/<?= $Player->username ?>/" class="btn btn-parchment btn-center">Voir</a>
+                        <?php if ($i < 7): ?>
+                            <div class="col-xl-3 col-lg-4 col-md-7 card-rank">
+                                <fieldset class="wood">
+                                    <div class="card truc bg_next">
+                                        <img class="card-img-top" src="/assets/img/ranks/person-male.png" alt="No one">
+                                        <div class="divider"></div>
+                                        <div class="card-body">
+                                            <h6 class="card-title">#<?= $i + 1 ?> <?= $Player->username ?> [<?= $Player->experience ?>XP]</h6>
+                                            <p class="card-text">
+                                                Peuple: <strong><?= ($Player->character->name == "ELF"? "Elfe": ($Player->character->name == "DWARF"? "Nain": ($Player->character->name == "HUMAN"? "Humain": null))) ?></strong>,
+                                                Classe: <strong><?= ($Player->character->class == "WAR"? "Guerrier": ($Player->character->class == "MAGE"? "Mage": ($Player->character->class == "ARCHER"? "Archer": null))) ?></strong>    
+                                            </p>
+                                            <a href="/profils/<?= $Player->username ?>/" class="btn btn-parchment btn-center">Voir</a>
+                                        </div>
                                     </div>
-                                </div>
-                            </fieldset>    
-                        </div>
+                                </fieldset>    
+                            </div>
+                        <?php else: break; endif; ?>
                     <?php endif; ?>
                 <?php endforeach; ?>
             </div>
