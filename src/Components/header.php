@@ -29,6 +29,9 @@
                         </ul>
                         <div class="form-inline my-2 my-lg-0">
                             <a class="btn btn-sm btn-outline-light" href="<?= (!empty($_SESSION["_ACCOUNT_"])? "/game/": "/connexion/") ?>">Jouer maintenant</a>
+                            <?php if (empty($_SESSION["_ACCOUNT_"])): ?>
+                                <a class="btn btn-sm btn-outline-success ml-3" href="/inscription/">Inscription</a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </nav>

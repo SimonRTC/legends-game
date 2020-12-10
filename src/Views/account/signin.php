@@ -1,4 +1,4 @@
-<div class="overlay overlay-fullscreen">
+<div class="overlay overlay-fullscreen" style="height: 100vh;">
 	<div class="fadeout">
 		<div class="container overlay-static">
             <div class="row justify-content-center py-5">
