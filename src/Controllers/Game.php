@@ -59,7 +59,7 @@ class Game {
                 }
             }
         }
-        die("ERROR!");
+        die("Unable to access this level!");
         return;
     }
 
