@@ -57,6 +57,29 @@ class Game {
         }
         return;
     }
+    
+    /**
+     * List all ranked players
+     *
+     * @return array
+     */
+    public function GetAllPlayersRanked(): array {
+        $Players = $this->Database->Request("SELECT `username`, `character_name`, `class`, `experience`, `level` FROM `players` ORDER BY `experience`")->fetchAll();
+        foreach ($Players as &$Player) {
+            if (!empty($Player["character_name"]) && !empty($Player["class"])) {
+                $Player = (object) [
+                    "username"      => $Player["username"],
+                    "experience"    => (float) $Player["experience"],
+                    "character"     => [
+                        "name"          => $Player["character_name"],
+                        "class"         => $Player["class"]
+                    ],
+                    "level"         => $Player["level"]
+                ];
+            }
+        }
+        return $Players;
+    }
         
     /**
      * Parse actions commands

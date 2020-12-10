@@ -12,46 +12,23 @@
     <div class="container">
         <div class="grcard card-deck">
             <div class="row justify-content-center">
-                <div class="col-xl-3 col-lg-4 col-md-7 card-rank">
-                    <fieldset class="wood">
-                        <div class="card truc bg_card_one">
-                            <img class="card-img-top" src="/assets/img/ranks/person-male.png" alt="No one">
-                            <div class="divider"></div>
-                            <div class="card-body">
-                                <h6 class="card-title">#1 Légende</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-parchment btn-center">Voir</a>
-                            </div>
+                <?php foreach ($_DATAS_["PLAYERS"] as $i => $Player): ?>
+                    <?php if ($i <= 2): ?>
+                        <div class="col-xl-3 col-lg-4 col-md-7 card-rank">
+                            <fieldset class="wood">
+                                <div class="card truc <?= ($i == 0? "bg_card_one": ($i == 1? "bg_card_two": ($i == 2? "bg_card_three": null))) ?>">
+                                    <img class="card-img-top" src="/assets/img/ranks/person-male.png" alt="No one">
+                                    <div class="divider"></div>
+                                    <div class="card-body">
+                                        <h6 class="card-title">#<?= $i + 1 ?> <?= $Player->username ?></h6>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a href="/profils/<?= $Player->username ?>/" class="btn btn-parchment btn-center">Voir</a>
+                                    </div>
+                                </div>
+                            </fieldset>
                         </div>
-                    </fieldset>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-7 card-rank">
-                    <fieldset class="wood">
-                        <div class="card truc bg_card_two">
-                            <img class="card-img-top" src="/assets/img/ranks/person-male.png" alt="No one">
-                            <div class="divider"></div>
-                            <div class="card-body">
-                                <h6 class="card-title">#2 Héro</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-parchment btn-center">Voir</a>
-                            </div>
-                        </div>  
-                    </fieldset>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-7 card-rank">
-                    <fieldset class="wood">
-                        <div class="card truc bg_card_three">
-                            <img class="card-img-top" src="/assets/img/ranks/person-male.png" alt="No one">
-                            <div class="divider"></div>
-                            <div class="card-body">
-                                <h6 class="card-title">#3 Champion</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-parchment btn-center">Voir</a>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="img-ranking"><img src="/assets/img/ranks/spellbook.png" alt="" class="spellbook"></div>   
-                </div>
+                    <?php else: break; endif; ?>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
@@ -59,45 +36,23 @@
     <div class="container">
         <div class="grcard card-deck">
             <div class="row justify-content-center">
-                <div class="col-xl-3 col-lg-4 col-md-7 card-rank">
-                    <fieldset class="wood">
-                        <div class="card truc bg_next">
-                            <img class="card-img-top" src="/assets/img/ranks/person-male.png" alt="No one">
-                            <div class="divider"></div>
-                            <div class="card-body">
-                                <h6 class="card-title">#4 Aventurier</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-parchment btn-center">Voir</a>
-                            </div>
+                <?php foreach ($_DATAS_["PLAYERS"] as $i => $Player): ?>
+                    <?php if ($i > 2): ?>
+                        <div class="col-xl-3 col-lg-4 col-md-7 card-rank">
+                            <fieldset class="wood">
+                                <div class="card truc bg_next">
+                                    <img class="card-img-top" src="/assets/img/ranks/person-male.png" alt="No one">
+                                    <div class="divider"></div>
+                                    <div class="card-body">
+                                        <h6 class="card-title">#<?= $i + 1 ?> <?= $Player->username ?></h6>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a href="/profils/<?= $Player->username ?>/" class="btn btn-parchment btn-center">Voir</a>
+                                    </div>
+                                </div>
+                            </fieldset>    
                         </div>
-                    </fieldset>    
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-7 card-rank">
-                    <fieldset class="wood">
-                        <div class="card truc bg_next">
-                            <img class="card-img-top" src="/assets/img/ranks/person-male.png" alt="No one">
-                            <div class="divider"></div>
-                            <div class="card-body">
-                                <h6 class="card-title">#5 Aventurier</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-parchment btn-center">Voir</a>
-                            </div>
-                        </div>
-                    </fieldset>    
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-7 card-rank">
-                    <fieldset class="wood">
-                        <div class="card truc bg_next">
-                            <img class="card-img-top" src="/assets/img/ranks/person-male.png" alt="No one">
-                            <div class="divider"></div>
-                            <div class="card-body">
-                                <h6 class="card-title">#6 Aventurier</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-parchment btn-center">Voir</a>
-                            </div>
-                        </div>
-                    </fieldset>    
-                </div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
