@@ -26,7 +26,7 @@
                         </div>
                         <div class="mt-2">
                             <?php if ($_DATAS_["EXPLORER"]($Chapter->tag) <= $_DATAS_["PLYTAG"]): ?>
-                                <a href="/game/<?= $Chapter->permalien ?>/" class="btn btn-parchment btn-gl d-flex justify-content-center">Début</a>
+                                <a href="/game/<?= $Chapter->permalien ?>/" class="btn btn-parchment btn-gl d-flex justify-content-center">Lancer</a>
                             <?php else: ?>
                                 <p class="text-center text-muted mt-3"><i><small>> Disponible au niveau <?= $Chapter->tag ?></small></i></p>
                             <?php endif; ?>
