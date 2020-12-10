@@ -275,7 +275,7 @@
                 "responses": [
                     {
                         "label": "Porter l'homme jusqu'à la place.",
-                        "actions": "DEFINE_PLAYER_MODEL[WAR]; GO_TO_QUESTION[1.10.0]"
+                        "actions": "GO_TO_QUESTION[1.10.0]"
                     },
                     {
                         "label": "Oopsie ! Faire demi tour ni vu ni connu...*sifflote*",
