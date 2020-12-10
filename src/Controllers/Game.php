@@ -18,10 +18,18 @@ class Game {
      * @return void
      */
     public function ListScene(\LegendsGame\Response $Response, array $Binded = []): void {
-        $plytag     = $_ACCOUNT_->Player->lvltag ?? "0.0.0";
+        $plytag     = $_SESSION["_ACCOUNT_"]->Player->lvltag ?? "0.0.0";
         $Chapters   = $this->Game->Chapters;
-        $Response -> load("game/gamelist");
-        dd($Chapters);
+        $explorer   = function ($tag) {
+            $tag = \explode(".", $tag)[0];
+            $tag = (int) $tag;
+            return $tag;
+        };
+        $Response->load("game/gamelist", [
+            "PLYTAG"    => $explorer($plytag),
+            "CHAPTERS"  => $Chapters,
+            "EXPLORER"  => $explorer
+        ]);
         return;
     }
         
@@ -41,7 +49,6 @@ class Game {
                 foreach ($chapter->questions as $question) {
                     $question->characters = $this->Game->GetCharacters($question->characters);
                     if ($question->tag == $plytag) {
-                        // dd($question);
                         $Response->load("game/scene", [
                             "permalien" => $permalien,
                             "CHAPTER"   => $chapter->name,
